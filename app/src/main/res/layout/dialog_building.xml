@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@drawable/bg_box"
+    >
+
+    <LinearLayout
+        android:id="@+id/img_buidling_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/farmlevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:fontFamily="@font/disneycomic"
+                    android:shadowColor="@android:color/white"
+
+                    android:text="Level: "
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/farm_count_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="-9dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/disneycomic"
+                    android:shadowColor="@android:color/white"
+
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_buidling_type"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/farm" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/box_market"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    >
+
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/star" />
+
+                    <TextView
+                        android:id="@+id/txt_currentLeveL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/disneycomic"
+                        android:paddingBottom="5dp"
+                        android:text="8"
+                        android:textColor="@color/brown"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+
+                    <ImageView
+                        android:id="@+id/img_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:src="@drawable/money" />
+
+                    <TextView
+                        android:id="@+id/txt_money_count"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/box"
+                        android:fontFamily="@font/disneycomic"
+                        android:gravity="center"
+                        android:paddingRight="11dp"
+                        android:text="100"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/disneycomic"
+                    android:shadowColor="@android:color/white"
+                    android:text="Upgrade"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/box_market"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/disneycomic"
+                    android:shadowColor="@android:color/white"
+                    android:text="@string/info"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/upgrade"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/upgrade" />
+
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/close_btn"
+        android:gravity="right" />
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:backgroundTint="@android:color/white"
+        android:background="@android:color/white"
+        android:indeterminateTint="@color/colorAccent"
+        android:padding="15dp"
+        />
+
+
+</RelativeLayout>

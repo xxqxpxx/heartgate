@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.cat.mahmoudelbaz.heartgate.myAccount.MayKnow">
+
+
+        <EditText
+            android:id="@+id/maysearch_view"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:drawablePadding="10dp"
+            android:hint="Search for Connections"
+            android:textSize="16sp" />
+
+
+
+
+    <ListView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/mayKnowlistView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:dividerHeight="10dp"/>
+
+
+
+    <ProgressBar
+        android:id="@+id/mayprogressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/maytxtEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:gravity="center"
+        android:text="No Connections"
+        android:textSize="35sp"
+        android:layout_gravity="center"/>
+
+</FrameLayout>

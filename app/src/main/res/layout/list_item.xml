@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/listcolor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/submenu_bg">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/lblListItem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+            />
+
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:clickable="false"
+            android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

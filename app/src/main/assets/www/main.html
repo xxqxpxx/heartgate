@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Heart Gate - Home</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    <body>
+        <div data-role="page" class="master" id="pageHome">
+
+        <div data-role="header">
+            <i class="fa fa-refresh fa-lg" aria-hidden="true" style="z-index: 9999999; position: absolute; right: 18%; bottom: 0"></i>
+            <img src="img/icon_M_top_right.png" width="150" style="top:0; right:0; position:fixed;" />
+            <img src="img/icon_top_left.png" width="300" />
+        </div>
+            
+		<div w3-include-html="home.html" role="main" class="ui-content">
+            
+        </div>
+		
+        
+
+        <div data-role="footer" class="footer navBtns" data-position="fixed">
+            <div data-role="navbar" data-grid="d" style="width:85%;">
+                <ul>
+                    <li id="btnOfHome"><a href="home.html" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_home.png" width="100%" /></a></li>
+                    <li id="btnOfConnections"><a href="connections.html" data-transition="slide" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_connections.png" width="100%" /></a></li>
+                    <li id="btnOfMessage"><a href="message.html" data-transition="slide" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_message.png" width="100%" /></a></li>
+                    <li id="btnOfNearby"><a href="nearby_drs.html" data-transition="slide" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_nearby.png" width="100%" /></a></li>
+                    <li id="btnOfDDI"><a href="ddi.html" data-transition="slide" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_ddi_nav.png" width="100%" /></a></li>
+                </ul>
+            </div><!-- /navbar -->
+            <div style="width: 15%; position: fixed; right: 0; bottom: 0">
+                <img src="img/icon_bottom_right.png" style="width:17%; bottom:0; position:fixed">
+            </div>
+        </div><!-- end footer -->
+    </div><!-- end page Home -->
+        <!-- jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/TweenMax.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/w3.js"></script>
+        <script src="js/manageUsers.js"></script>
+        
+        <script>
+            w3.includeHTML();
+        </script>
+
+        <script>
+            $('#btnOfNearby').on('click', function(){
+                AndroidFunction.nearBy();
+            });
+        </script>
+        
+    </body>
+</html>

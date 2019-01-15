@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@drawable/bg_box"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        android:weightSum="8">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:weightSum="5"
+            >
+
+
+
+                <ImageView
+                    android:id="@+id/btn_water"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/resource_water_on"
+                    />
+
+
+
+                <ImageView
+                    android:id="@+id/btn_electricity"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/resource_elec_off" />
+
+
+
+
+                <ImageView
+                    android:id="@+id/btn_doctors"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+
+                    android:src="@drawable/resource_doc_off" />
+
+
+
+                <ImageView
+                    android:id="@+id/btn_farmers"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+
+                    android:src="@drawable/resource_farmer_off"
+                    />
+
+
+
+                <ImageView
+                    android:id="@+id/btn_workers"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+
+                    android:src="@drawable/resource_worker_off" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/requests_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+
+
+
+
+            <!--<FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/container"
+                />-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcv_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/title"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/resources_click" />
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/close_btn" />
+
+
+    <TextView
+        android:id="@+id/mytxtEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/disneycomic"
+        android:gravity="center"
+        android:text="You Already have this Resource"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:backgroundTint="@android:color/white"
+        android:background="@android:color/white"
+        android:indeterminateTint="@color/colorAccent"
+        android:padding="15dp"
+        />
+
+</RelativeLayout>

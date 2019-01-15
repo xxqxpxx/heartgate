@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentTop="true"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/request_txt_box"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_vertical"
+    >
+
+
+    <TextView
+        android:id="@+id/txIn_userName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1.5"
+        android:fontFamily="@font/disneycomic"
+        android:gravity="center_vertical"
+
+        android:text="Ahmed Ahmed"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:id="@+id/btn_request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:background="@drawable/resource_request_btn"
+        android:layout_marginEnd="20dp" />
+</LinearLayout>

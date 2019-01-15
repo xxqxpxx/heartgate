@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Heart Gate - Profile</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    
+    <body>
+-->
+        <style>
+            input[placeholder]{
+                background: none;
+                border: none;
+                text-shadow: none;
+                color: #fff !important;
+                box-shadow: none;
+                text-align: left;
+                margin: 5px auto;
+                padding: 9px;
+                font-family: verdana
+            }
+            ::-webkit-input-placeholder{
+                color: dimgray!important
+            }
+            
+            /* My Profile page view and edit */
+
+            #updateUserInfo .form-group label.view{
+                display: inline-block
+            }
+            #updateUserInfo .form-group input.view{
+                display: inline-block;
+                padding: 2px 3px;
+                font-size: 14px;
+                margin: 0;
+                color: #004ce2 !important;
+                background-color: rgba(255, 255, 255, 0);
+                background-image: none;
+                border: none; 
+            }
+        </style>
+		
+		<div data-role="page" class="master" id="pageProfile" data-enhance="false" onload="chpassword()">
+			
+			<div data-role="header" data-position="fixed" data-theme="b" style="background:#fdcc29; color: darkred; position: fixed">
+				<a data-rel="back" data-direction="reverse" class="backBtnNavTop" id="backBtn">Back</a>
+				<h1>My Profile</h1>
+				<img src="img/icon_M_top_right_withoutBG.png" width="50" style="top:10px; right:10px; position:fixed;" />
+			</div>
+			
+			<div role="main" class="ui-content" style="padding: 10px 40px"> <!-- Start Contents from here -->
+                
+                <div class="row">
+                    <div class="col-xs-12 changeProfilePic">
+                        <form id="updateProfilePic" name="updateProfilePic" enctype="multipart/form-data">
+
+                            <label class="text-center">
+                                <img src="img/loader.gif" style="cursor:pointer" alt="" width="25%" id="image_profile" name="image_profile" />
+                            </label>
+                            
+                            
+                            <button type="submit" id="submitPhoto" class="col-xs-push-3 col-xs-6 btn btn-default" data-role="none">Change</button>
+                            
+                        </form>
+                    </div>
+                </div>
+				
+				<form class="form-horizontal updateUserInfo" id="updateUserInfo" data-role="none">
+                    
+					<div class="form-group">
+						<label for="fullName" class="view">Full Name:</label><br>
+                        <input type="text" name="firstname" id="firstname" placeholder="First Name" class="view col-xs-4" required data-role="none">
+                        <input type="text" name="midname" id="midname" placeholder="Mid. Name" class="view col-xs-4" required data-role="none">
+                        <input type="text" name="lastname" id="lastname" placeholder="Last Name" class="view col-xs-4" required data-role="none">
+					</div>
+                    
+					<div class="form-group">
+						<label for="username" class="view">Username:</label>
+				        <input type="text" name="username" id="username" placeholder="User Name" class="view" required autocomplete="off" data-role="none">
+					</div>
+                    
+                    <div class="form-group" id="checkboxid">
+						<label for="chgpassword" class="view">Change Password</label>
+				        <input class="view" type="checkbox" id="chgpassword" name="chgpassword" data-role="none" style="transform: scale(1.3); margin-left: 25px" />
+					</div>
+                    
+					<div class="form-group" id="password-form" style="height: 1px; overflow: hidden; margin-bottom: 0; opacity: 0">
+						<label for="password" class="view">Current Password:</label>
+				        <input type="password" name="oldpassword" id="oldpassword" placeholder="Current Password" class="view" autocomplete="off" data-role="none">
+                        
+						<label for="password" class="view">New Password:</label>
+				        <input type="password" name="password" id="password" placeholder="New Password" class="view" autocomplete="off" data-role="none">
+                        
+						<label for="password" class="view">Confirm Password:</label>
+						<input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="view" autocomplete="off" data-role="none">
+					</div>
+
+					<div class="form-group">
+                        <label for="email" class="view">E-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="Email" class="view" required data-role="none">
+					</div>
+
+					<div class="form-group">
+						<label for="phoneNumber" class="view">Phone Number:</label>
+                        <input type="text" name="mobile_number" id="mobile_number" placeholder="Your Phone Number" class="view" required data-role="none">
+					</div>
+
+					<div class="form-group">
+						<label for="birthDate" class="view">Date of Birth:</label>
+                        <input type="date" name="birthdate" id="birthdate" class="view" data-role="none">
+					</div>
+                    
+					<div class="form-group">
+						<label class="view">Gender:</label>
+                        <select name="fk_gender_id" id="fk_gender_id" class="view" required data-role="none">
+
+                        </select>
+						
+					</div> <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label for="speciality" class="view">Speciality:</label>
+                        <select name="fk_speciality_id" id="fk_speciality_id" class="view" required data-role="none">
+
+                        </select>
+                    </div> <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label for="job-title" class="view">Job Title:</label>
+                        <select name="fk_job_id" id="fk_job_id" class="view" required data-role="none">
+
+                        </select>
+                    </div> <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label for="livingPlace" class="view">Current Living Place:</label>
+                        <select name="fk_current_living_place" id="fk_current_living_place" class="view" required data-role="none">
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workingPlace" class="view">Current Work Place:</label>
+                        <select name="fk_current_work_place" id="fk_current_work_place" class="view" required data-role="none">
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prevWorkPlace" class="view">Previous Work Place:</label>
+                        <select name="fk_previous_work_place" id="fk_previous_work_place" class="view" data-role="none">
+
+                        </select>
+                    </div>
+
+					<div class="form-group">
+						<label for="work exp" class="view">Years Of Work Experience:</label>
+                        <select name="fk_year_of_experience" id="fk_year_of_experience" class="view" required data-role="none">
+
+                        </select>
+					</div> <!-- /.form-group -->
+                    
+					<div class="form-group">
+						<div class="col-xs-7 col-xs-offset-3">
+						</div>
+					</div> <!-- /.form-group -->
+
+						<div class="form-group">
+							<label for="interests" class="view">Interests:</label>
+							<div class="col-xs-12">
+								<textarea class="view" style="width: 100%" name="interests" id="interests" data-role="none"></textarea>
+							</div>
+						</div>
+
+					<div class="form-group">
+						<div class="col-xs-12">
+							<button type="submit" class="btn btn-success btn-block">Save</button>
+						</div>
+					</div>
+				</form> <!-- /form -->
+				
+			</div> <!-- End contents -->
+			
+			<div data-role="footer" class="footer navBtns" data-position="fixed">
+				<div data-role="navbar" data-grid="d" style="width:85%;">
+					<ul>
+						<li id="btnOfHome"><a href="home.html" data-transition="slide" data-direction="reverse" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_home.png" width="100%" /></a></li>
+						<li id="btnOfConnections"><a href="connections.html" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_connections.png" width="100%" /></a></li>
+						<li id="btnOfPrice"><a href="concor_price.html" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_price.png" width="100%" /></a></li>
+						<li id="btnOfNearby"><a href="#" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_nearby.png" width="100%" /></a></li>
+						<li id="btnOfDDI"><a href="ddi.html" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_ddi_nav.png" width="100%" /></a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<div style="width: 15%; position: fixed; right: 0; bottom: 0">
+					<img src="img/icon_bottom_right.png" style="width:17%; bottom:0; position:fixed">
+				</div>
+			</div><!-- end footer -->
+		</div><!-- end page 1 -->
+		
+        
+		<!-- jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		
+		<script>
+			$('#pageProfile').on('pagecreate', function(event, ui){
+				console.log('Page Profile page loaded');
+			});
+            
+            
+		</script>
+
+
+        <script>
+            $('#btnOfNearby').on('click', function(){
+                AndroidFunction.nearBy();
+            });
+        </script>
+        
+        <script src="js/manageUsers.js"></script>
+        
+    </body>
+</html>

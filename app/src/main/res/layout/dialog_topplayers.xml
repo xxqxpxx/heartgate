@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="500dp"
+    android:background="@drawable/play_box2"
+    android:orientation="vertical"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/requests_title"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="35dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcv_layout"
+                android:layout_width="322dp"
+                android:layout_height="366dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/requests_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/disneycomic"
+        android:gravity="center"
+        android:text="Top Players"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/close_btn" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:backgroundTint="@android:color/white"
+        android:background="@android:color/white"
+        android:indeterminateTint="@color/colorAccent"
+        android:padding="15dp"
+        style="?android:attr/progressBarStyle"
+        android:visibility="gone"
+
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bk"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:windowSoftInputMode="adjustPan"
+    tools:context=".View.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:windowSoftInputMode="adjustPan"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1">
+
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txIn_userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/userName"
+                    android:inputType="text"
+                    android:fontFamily="@font/disneycomic"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txIn_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+
+                    android:fontFamily="@font/disneycomic"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chckRemember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/black"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="remember me"
+
+                    android:fontFamily="@font/disneycomic"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+
+                    />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/btn_login"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_login"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/btn_signup"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_signup"
+                android:scaleType="fitXY" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_pdf"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/howtoplay"
+        android:scaleType="fitXY" />
+
+
+</LinearLayout>

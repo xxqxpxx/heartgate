@@ -1,0 +1,242 @@
+package dev.cat.mahmoudelbaz.heartgate.myAccount;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+import dev.cat.mahmoudelbaz.heartgate.R;
+
+import static android.content.ContentValues.TAG;
+
+
+public class RecievedConnections extends Fragment {
+
+    ConnectionsTabs activity;
+
+
+    String url, userId;
+    ArrayList<ModelMyConnections> receivedConnections = new ArrayList<ModelMyConnections>();
+
+    Boolean isLoading;
+    AdapterReceivedConnections receivedConnectionsAdapter;
+
+    ListView receivedlist;
+    ProgressBar receivedprogress;
+    TextView receivedempty;
+    SharedPreferences shared;
+    EditText receivedsearchView;
+    int pageId;
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        pageId = 1;
+        receivedConnections.clear();
+        isLoading = false;
+
+
+        View view = inflater.inflate(R.layout.fragment_recieved_connections, container, false);
+
+
+        shared = this.getActivity().getSharedPreferences("id", Context.MODE_PRIVATE);
+        userId = shared.getString("id", "0");
+
+
+        activity = (ConnectionsTabs) getActivity();
+
+        receivedsearchView = (EditText) view.findViewById(R.id.receivedsearch_view);
+        receivedlist = (ListView) view.findViewById(R.id.receivedlistView);
+        receivedprogress = (ProgressBar) view.findViewById(R.id.receivedprogressBar);
+        receivedempty = (TextView) view.findViewById(R.id.receivedtxtEmpty);
+        receivedlist.setEmptyView(receivedempty);
+
+
+        receivedConnectionsAdapter = new AdapterReceivedConnections(activity, receivedConnections);
+
+
+        url = " http://hg.api.digitalcatsite.com/connections/receive_connections/" + userId + "/" + pageId;
+
+        Log.d(TAG, "Recieved: " + url);
+
+        StringRequest productsRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                try {
+//                    JSONObject object = new JSONObject(response);
+                    JSONArray usersarray = new JSONArray(response);
+                    if (usersarray.length() == 0) {
+                        receivedprogress.setVisibility(View.INVISIBLE);
+                    } else {
+
+                        pageId++;
+                        for (int i = 0; i < usersarray.length(); i++) {
+                            JSONObject currentobject = usersarray.getJSONObject(i);
+                            final int id = currentobject.getInt("id");
+                            final int stateId = currentobject.getInt("state_id");
+                            final String fullName = currentobject.getString("fullname");
+                            final String jobTitle = currentobject.getString("speciality");
+                            final String picture = currentobject.getString("image_profile");
+                            final String imageUrl = "http://assets.hg.api.digitalcatsite.com/" + picture;
+
+                            receivedConnections.add(new ModelMyConnections(stateId, id, fullName, jobTitle, imageUrl));
+                            receivedlist.setAdapter(receivedConnectionsAdapter);
+
+                            receivedprogress.setVisibility(View.INVISIBLE);
+
+                        }
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(activity, "Network Error", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        Volley.newRequestQueue(activity).add(productsRequest);
+
+
+        receivedlist.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+
+            }
+
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+                if (receivedlist.getAdapter() == null)
+                    return;
+
+                if (receivedlist.getAdapter().getCount() == 0)
+                    return;
+
+                int l = visibleItemCount + firstVisibleItem;
+                if (l >= totalItemCount && !isLoading) {
+                    // It is time to add new data. We call the listener
+                    isLoading = true;
+                    loadData();
+                }
+
+            }
+        });
+
+
+        receivedsearchView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int i, int i1, int i2) {
+
+                receivedConnectionsAdapter.getFilter().filter(s.toString());
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        return view;
+    }
+
+    private void loadData() {
+
+
+        receivedprogress.setVisibility(View.VISIBLE);
+
+        url = "http://hg.api.digitalcatsite.com/connections/receive_connections/" + userId + "/" + pageId;
+
+        StringRequest productsRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                try {
+//                    JSONObject object = new JSONObject(response);
+                    JSONArray usersarray = new JSONArray(response);
+
+                    if (usersarray.length() == 0) {
+                        isLoading = true;
+                        receivedprogress.setVisibility(View.INVISIBLE);
+                    } else {
+                        isLoading = false;
+                        pageId++;
+                    }
+
+
+                    for (int i = 0; i < usersarray.length(); i++) {
+                        JSONObject currentobject = usersarray.getJSONObject(i);
+                        final int id = currentobject.getInt("id");
+                        final int stateId = currentobject.getInt("state_id");
+                        final String fullName = currentobject.getString("fullname");
+                        final String jobTitle = currentobject.getString("speciality");
+                        final String picture = currentobject.getString("image_profile");
+                        final String imageUrl = "http://assets.hg.api.digitalcatsite.com/" + picture;
+
+                        receivedConnections.add(new ModelMyConnections(stateId, id, fullName, jobTitle, imageUrl));
+
+
+                        receivedprogress.setVisibility(View.INVISIBLE);
+                        receivedConnectionsAdapter.notifyDataSetChanged();
+
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(activity, "Network Error", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        Volley.newRequestQueue(activity).add(productsRequest);
+
+
+    }
+
+
+}

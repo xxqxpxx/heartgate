@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_concor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.cat.mahmoudelbaz.heartgate.concor.Concor">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/register_bg_tr"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/semi_black"
+        android:fitsSystemWindows="true"
+        android:id="@+id/relativeLayout"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/bck"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="false"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/back"
+                android:padding="15dp"
+                android:tint="@color/yellow" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Concor"
+                android:textSize="22sp"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:textColor="@color/yellow"
+                android:gravity="center"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:childDivider="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="1dp" />
+
+    <LinearLayout
+
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_home"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:src="@drawable/home" />
+
+
+
+        <ImageView
+            android:id="@+id/img_connections"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:src="@drawable/connections" />
+
+
+
+
+        <ImageView
+            android:id="@+id/img_conor_price"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:src="@drawable/messages" />
+
+
+
+
+        <ImageView
+            android:id="@+id/img_neaby_drs"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:src="@drawable/nearby" />
+
+
+        <ImageView
+            android:id="@+id/img_drug_interactions"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ddi" />
+
+
+        <ImageView
+            android:id="@+id/vetmedica"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:src="@drawable/iconright" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

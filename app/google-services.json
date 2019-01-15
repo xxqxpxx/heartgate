@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1095040492001",
+    "firebase_url": "https://heartgate-a1d21.firebaseio.com",
+    "project_id": "heartgate-a1d21",
+    "storage_bucket": "heartgate-a1d21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095040492001:android:bb78a8f68365047c",
+        "android_client_info": {
+          "package_name": "dev.cat.mahmoudelbaz.heartgate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095040492001-vhhpp2ig2ituvu1n1ln7t4uigsc1uutm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1fQYEhB_u2NXrLyAtSmoDrrgek_LK3g0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

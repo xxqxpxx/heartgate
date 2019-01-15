@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <LinearLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bar"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="65dp"
+
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_money"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:src="@drawable/money" />
+
+        <TextView
+            android:id="@+id/txt_money_count"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/disneycomic"
+            android:gravity="center"
+            android:paddingRight="11dp"
+            android:text="100"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="65dp"
+
+        android:layout_height="80dp"
+
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout2"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_food"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/food_ico" />
+
+        <TextView
+            android:id="@+id/txt_food_count"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/disneycomic"
+            android:gravity="center"
+            android:paddingRight="11dp"
+            android:text="100"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+
+
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="65dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout3"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/medicine_ico" />
+
+        <TextView
+            android:id="@+id/txt_medicine_count"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/disneycomic"
+            android:gravity="center"
+            android:paddingRight="11dp"
+            android:text="100"
+            android:textColor="@android:color/white"
+
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="64dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="484dp"
+        app:layout_constraintEnd_toStartOf="@+id/img_profile"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_animals"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/animals_ico" />
+
+        <TextView
+            android:id="@+id/txt_animals_count"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/disneycomic"
+            android:gravity="center"
+            android:paddingRight="11dp"
+            android:text="100"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+
+            />
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:layout_marginBottom="28dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/img_resources"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/resources_click"
+        app:layout_constraintBottom_toTopOf="@+id/img_market"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/toplayout" />
+
+
+    <ImageView
+        android:id="@+id/img_market"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="267dp"
+        android:layout_marginLeft="267dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/market_btn"
+        app:layout_constraintBottom_toTopOf="@+id/img_requests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_resources" />
+
+
+    <ImageView
+        android:id="@+id/img_requests"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginStart="267dp"
+        android:layout_marginLeft="267dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/request_btn"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/img_market" />
+
+
+    <RelativeLayout
+        android:id="@+id/farm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/img_market_layout"
+        android:layout_gravity="start"
+        android:layout_marginTop="12dp"
+        android:gravity="start"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/stock_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_market">
+
+        <ImageView
+            android:id="@+id/img_farm"
+            android:layout_width="112dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/farm_img" />
+
+        <TextView
+            android:id="@+id/farmlevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/img_farm"
+            android:layout_alignRight="@+id/img_farm"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/black"
+            android:fontFamily="@font/disneycomic"
+            android:shadowColor="@android:color/black"
+            android:text="Level: "
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/farm_count_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/farmlevel"
+            android:layout_alignRight="@+id/img_farm"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-9dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/black"
+            android:fontFamily="@font/disneycomic"
+            android:shadowColor="@android:color/white"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/stock_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/farm_layout"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/factory_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farm_layout">
+
+        <ImageView
+            android:id="@+id/img_stock"
+            android:layout_width="112dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="46dp"
+            android:layout_marginRight="46dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+
+            android:src="@drawable/stockyard_img" />
+
+        <TextView
+            android:id="@+id/stocklevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/img_stock"
+            android:layout_alignRight="@+id/img_stock"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/black"
+            android:fontFamily="@font/disneycomic"
+            android:shadowColor="@android:color/white"
+            android:text="Level: "
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stock_level_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/stocklevel"
+            android:layout_alignRight="@+id/img_stock"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-9dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/black"
+            android:fontFamily="@font/disneycomic"
+            android:shadowColor="@android:color/black"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/factory_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/stock_layout"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stock_layout">
+
+        <ImageView
+            android:id="@+id/img_factory"
+            android:layout_width="112dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="70dp"
+            android:adjustViewBounds="true"
+
+            android:scaleType="fitXY"
+            android:src="@drawable/factory_img" />
+
+        <TextView
+            android:id="@+id/factorylevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/img_factory"
+            android:layout_alignRight="@+id/img_factory"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/black"
+
+            android:fontFamily="@font/disneycomic"
+            android:shadowColor="@android:color/white"
+            android:text="Level: "
+
+            android:textColor="@android:color/white"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/factorylevelcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/factorylevel"
+            android:layout_alignRight="@+id/img_factory"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-9dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/black"
+            android:fontFamily="@font/disneycomic"
+            android:shadowColor="@android:color/black"
+
+            android:text="1"
+            android:textColor="@android:color/white"
+
+
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/factory_layout"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/factory_layout">
+
+        <ImageView
+            android:id="@+id/img_hospital"
+            android:layout_width="112dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="46dp"
+            android:layout_marginRight="46dp"
+
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/hospital_img" />
+
+        <TextView
+            android:id="@+id/hospitallevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/img_hospital"
+            android:layout_alignRight="@+id/img_hospital"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/black"
+            android:fontFamily="@font/disneycomic"
+
+            android:shadowColor="@android:color/white"
+            android:text="Level: "
+
+            android:textColor="@android:color/white"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hospital_level_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/hospitallevel"
+            android:layout_alignRight="@+id/img_hospital"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-9dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/black"
+            android:fontFamily="@font/disneycomic"
+            android:shadowColor="@android:color/white"
+            android:text="1"
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+
+        <ImageView
+            android:id="@+id/btn_water"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/wateroff" />
+
+
+        <ImageView
+            android:id="@+id/btn_electricity"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/electricityoff"
+
+            />
+
+        <ImageView
+            android:id="@+id/btn_doctors"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/doctorsoff"
+
+            />
+
+        <ImageView
+            android:id="@+id/btn_farmers"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/farmersoff"
+
+            />
+
+        <ImageView
+            android:id="@+id/btn_workers"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:scaleType="fitCenter"
+            android:src="@drawable/workersoff"
+
+            />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
