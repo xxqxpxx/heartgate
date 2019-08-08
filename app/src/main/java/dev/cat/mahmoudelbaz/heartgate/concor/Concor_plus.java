@@ -14,10 +14,9 @@ import java.util.HashMap;
 import java.util.List;
 
 import dev.cat.mahmoudelbaz.heartgate.R;
-import dev.cat.mahmoudelbaz.heartgate.advisoryBoard.AskExperts;
+import dev.cat.mahmoudelbaz.heartgate.advisoryBoard.Questions;
 import dev.cat.mahmoudelbaz.heartgate.drugInteractions.DrugInteractions;
-import dev.cat.mahmoudelbaz.heartgate.game.View.LoginActivity;
-import dev.cat.mahmoudelbaz.heartgate.heartPress.CardioUpdates;
+ import dev.cat.mahmoudelbaz.heartgate.heartPress.CardioUpdates;
 import dev.cat.mahmoudelbaz.heartgate.heartPress.OnlineLibrary;
 import dev.cat.mahmoudelbaz.heartgate.home.Child_item;
 import dev.cat.mahmoudelbaz.heartgate.home.ExpandableListAdapter;
@@ -268,7 +267,7 @@ public class Concor_plus extends AppCompatActivity {
 
                     switch (childPosition) {
                         case 0:
-                            i = new Intent(Concor_plus.this, AskExperts.class);
+                            i = new Intent(Concor_plus.this, Questions.class);
                             startActivity(i);
                             break; // optional
 
@@ -300,13 +299,13 @@ public class Concor_plus extends AppCompatActivity {
                             // Statements
                     }
 
-                } else if (groupPosition == 7) {
+                } /*else if (groupPosition == 7) {
 
                     i = new Intent(Concor_plus.this, LoginActivity.class);
                     startActivity(i);
                     finish();
 
-                }
+                }*/
 
 
                 return true;

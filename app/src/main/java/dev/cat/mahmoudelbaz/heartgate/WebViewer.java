@@ -428,7 +428,7 @@ public class WebViewer extends ActivityManagePermission implements GoogleApiClie
         String myUserID = shared.getString("id", "0");
 
 
-        String myurl = "http://hg.api.digitalcatsite.com/users/location";
+        String myurl = "http://heartgate.co/api_heartgate/users/location";
 
         JSONObject jsobj = new JSONObject();
         try {
@@ -570,7 +570,7 @@ public class WebViewer extends ActivityManagePermission implements GoogleApiClie
 
 
         progress.setVisibility(View.VISIBLE);
-        String signUpUrl = "http://hg.api.digitalcatsite.com/users/update_imageprofile_ios/" + shared.getString("id", "0");
+        String signUpUrl = "http://heartgate.co/api_heartgate/users/update_imageprofile_ios/" + shared.getString("id", "0");
 
 
         final JSONObject jsobj = new JSONObject();

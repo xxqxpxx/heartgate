@@ -4,7 +4,7 @@
     android:id="@+id/activity_concor_price"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/register_bg_tr"
+    android:background="@drawable/bg"
     android:layout_height="match_parent"
     tools:context="dev.cat.mahmoudelbaz.heartgate.concor.ConcorPrice">
 
@@ -38,6 +38,8 @@
                    android:layout_alignParentBottom="true"
                    android:src="@drawable/back"
                    android:padding="15dp"
+                   android:visibility="gone"
+
                    android:tint="@color/yellow" />
 
 
@@ -66,6 +68,7 @@
 
        </android.support.v7.widget.RecyclerView>
        <LinearLayout
+           android:visibility="invisible"
 
            android:id="@+id/bottomLayout"
            android:layout_width="match_parent"

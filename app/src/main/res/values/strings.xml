@@ -138,34 +138,10 @@
         <item>7-10</item>
         <item>More than 10 years</item>
     </string-array>
-    <string name="title_activity_connections_tabs">ConnectionsTabs</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_maps">Map</string>
 
-
-    <string name="name">Name</string>
-    <string name="userName">Username</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="confirmPassword">Confirm Password</string>
-    <string name="signUp">Sign Up</string>
-    <string name="emptyField">Complete Fields</string>
-    <string name="worngPassword">Wrong Pasworrd</string>
-    <string name="pleaseWait">Please Wait</string>
-    <string name="loading">Loading ....</string>
-    <string name="login">login</string>
-    <string name="info">Info: Loading Please Wait Info: Loading Please WaitInfo: Loading Please WaitInfo: Loading Please WaitInfo: Loading Please WaitInfo: Loading Please Wait</string>
-
-
-    <string name="water">1</string>
-    <string name="electricity">2</string>
-    <string name="workers">3</string>
-    <string name="doctors">4</string>
-    <string name="farmers">5</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 
@@ -446,31 +422,6 @@
     </string>
 
 
-    <string name="Properties">
-        <![CDATA[
-                  <h3>Mechanism Of Action / Pharmacodynamics:</h3>
-								<ul>
-									<li>- Bisoprolol is a selective β1-receptor blocker and has neither intrinsic sympathomimetic nor relevant membrane-stabilizing properties. This high affinity for β1-receptors is accompanied by low affinity for β2-receptors in the smooth muscle of the bronchi and vessels as well as the β2-receptors involved in metabolic regulation. For this reason, bisoprolol is not expected to have an effect on airway resistance or β2-dependent metabolism in patients with heart failure, at least at low doses. Its β1-selectivity is maintained over the entire therapeutic dose range. Bisoprolol has no negative inotropic effects during long-term use.</li><br>
-									<li>- The selective blockade of β1-receptors and the sympathetic nervous system reduces cardiac output and lowers blood pressure.</li>
-									<li>- During long-term treatment, the initially elevated peripheral resistance falls. By blocking cardioselective β1-receptors, bisoprolol reduces responsiveness to adrenergic stimuli.</li>
-								</ul>
-								<h3>Clinical Efficacy:</h3>
-								<ul>
-									<li>- Clinical studies of heart failure patients have shown that administration of bisoprolol in combination with a diuretic and an ACE inhibitor significantly reduces the mortality rate. Two heart failure studies (CIBIS I and CIBIS II), in which bisoprolol was administered in combination with diuretics and ACE inhibitors, showed that it had a beneficial effect on survival: while the 20% reduction in mortality seen in the first CIBIS study (n = 641 patients, of whom 320 took bisoprolol) was not significant, CIBIS II (n = 2647 patients, of whom 1327 took bisoprolol) showed a highly significant reduction in overall mortality in NYHA III/IV patients (11.8% of bisoprolol patients compared to 17.3% in the placebo group; relative reduction: 34%). There was also a clear decrease in cases of sudden cardiac death (3.6% compared to 6.3%; relative reduction: 44%) and the number of admissions to hospital because of worsening heart failure (12% compared to 17.6%; relative reduction: 36%). Finally, there was evidence of a significant improvement in cardiac function based on the NYHA classification.</li><br>
-
-									<li>- The condition of the patients, who were assigned to only classes III and IV at baseline, improved so much during the study that 25.6% were in NYHA class II after 6 months. This figure rose to 32.3% after 12 months and 35.1% after 18 months. 1.7%, 2.8% and 3.3% were in NYHA class I after 6 months, 12 months and 18 months respectively. At 15%, the proportion of patients who stopped taking bisoprolol permanently was similar to that recorded for the placebo.</li><br>
-
-									<li>- A study of 36 patients with coronary heart disease (but not chronic heart failure) showed that bisoprolol reduces the heart rate and rate-pressure product, thereby relieving the heart.</li><br>
-
-									<li>- The CIBIS III study was conducted on 1010 patients aged 65 and over with mild to moderate chronic heart failure (NYHA classes II or III) and a left ventricular ejection fraction of ≤ 35%. The patients had not been treated with ACE inhibitors, β-blockers or angiotensin receptor blockers previously. This study compared the efficacy and safety of treatment starting with six months of bisoprolol (target dose 10 mg once daily), followed by additional administration of the ACE inhibitor enalapril (target dose 10 mg twice daily) for an additional 6-24 months, with those of treatment starting with enalapril, followed by additional administration of bisoprolol. There were 505 patients in each treatment group. The two treatment strategies were analyzed in a blinded fashion for both the combined primary endpoint - all-cause mortality or hospitalization - and the individual components. The intention-to-treat (ITT) analysis showed that a primary endpoint event occurred in 178 patients in the group that started with bisoprolol (35.2%) and in 186 patients in the group that started with enalapril (36.8%). Therefore, the efficacy of treatment that starts with bisoprolol and adds enalapril is comparable (non-inferior) to that of the same combination administered in reverse order. 65 of the patients who started with bisoprolol died and 73 of the patients who started with enalapril died (difference between the groups: p = 0.44).</li><br>
-
-									<li>- 151 of the patients who started with bisoprolol were admitted to hospital and 157 of the patients who started with enalapril were admitted to hospital (p = 0.66). The number of serious adverse events and the total number of adverse events were similar between the two groups. An analysis of the data from the first year of the study showed a 31% reduction in all-cause mortality in the group that started with bisoprolol compared to the group that started with enalapril. This trend was not significant. The survival benefit in the group that started with bisoprolol is attributed mainly to a 46% reduction in the risk of sudden cardiac death (p = 0.049) in the first year of treatment.</li><br>
-								</ul>
-
-        ]]>
-    </string>
-
-
     <string name="Pharmacokinetics">
         <![CDATA[
                   <h3>Absorption</h3>
@@ -666,49 +617,6 @@
     </string>
 
 
-    <string name="Pharmaceutical_plus">
-        <![CDATA[
-
-								<h5> Treatment with bisoprolol must not be stopped suddenly unless clearly indicated, since abrupt withdrawal of bisoprolol may lead to an acute worsening of the patient\'s condition in particular in patients with ischaemic heart disease (see Dosage and Administration).</h5>
-								<p>The following section describes when Concor Plus must be used with special caution (e.g. additional treatment or more frequent checks):</p>
-								<ul>
-									<li>- Any heart disease such as heart failure, mild disturbances in heart rhythm (first degree AV block), or disturbed blood flow in the coronary vessels due to vasospasms (Prinzmetal’s angina).</li><br>
-									<li>- Peripheral arterial occlusive disease (intensification of complaints may occur especially when starting therapy).</li><br>
-									<li>- Liver problems.</li><br>
-									<li>- Diabetes mellitus with extremely fluctuating blood glucose levels: symptoms of markedly reduced blood glucose (hypoglycaemia) such as tachycardia, palpitations or sweating can be masked.</li><br>
-									<li>- Psoriasis experienced currently or in the past.</li><br>
-									<li>- Strict fasting</li><br>
-									<li>Hyperuricaemia, as hydrochlorothiazide may enhance the risk for gout attacks.</li><br>
-									<li>- Hypovolaemia.</li><br>
-									<li>- Respiratory system: Although cardioselective (beta 1) beta-blockers may have less effect on lung function than non- selective beta-blockers, as with all beta-blockers, these should be avoided in patients with obstructive airway diseases, unless there are compelling clinical reasons for their use. Where such reasons exist, Concor plus may be used with caution. In bronchial asthma or other symptomatic chronic obstructive pulmonary diseases concomitant bronchodilator therapy is indicated. An increase in airway resistance may occasionally occur in patients with asthma, requiring a higher dose of beta2–sympathomimetics.</li><br>
-									<li>- Allergic reactions: As with other beta-blockers, bisoprolol may increase both the sensitivity towards allergens and the severity of anaphylactic reactions. This also applies to desensitisation therapy. Epinephrine treatment may not always yield the expected therapeutic effect.</li><br>
-									<li>- General anaesthesia: In patients undergoing general anaesthesia the anaesthetist must be aware of beta-blockade. If it is thought necessary to withdraw Concor Plus before surgery, this should be done gradually and completed about 48 hours prior to anaesthesia.</li><br>
-									<li>- Phaeochromocytoma: In patients with a tumour of the adrenal gland (phaeochromocytoma) Concor Plus may only be administered after previous alpha-receptor blockade.</li><br>
-									<li>- Thyrotoxicosis: Under treatment with Concor Plus the symptoms of a thyroid hyperfunction (thyrotoxicosis) may be masked.</li><br>
-									<li>- Photosensitivity reactions may occur with thiazide diuretics. If photosensitivity reactions occur, it is recommended to protect exposed areas to the sun or to artificial UVA light. In severe cases it may be necessary to stop the treatment.</li><br>
-									<li>- Long-term, continuous administration of hydrochlorothiazide may lead to fluid and electrolyte disturbances, in particular to hypokalaemia and hyponatraemia, also to hypomagnesaemia and hypochloraemia, and hypercalcaemia. Hypokalaemia facilitates the development of severe arrhythmias, particularly torsade de pointes, which may be fatal.</li><br>
-									<li>During long term-therapy with hydrochlorothiazide, monitoring of serum electrolytes (especially potassium, sodium, calcium), creatinine and urea, the serum lipids (cholesterol and triglycerides), uric acid as well as blood glucose is recommended.</li><br>
-									<li>Hydrochlorothiazide, a sulfonamide, can cause an idiosyncratic reaction, resulting in acute transient myopia and acute angle-closure glaucoma. Symptoms include acute onset of decreased visual acuity or ocular pain and typically occur within hours to weeks of drug initiation. Untreated acute angle-closure glaucoma can lead to permanent vision loss. The primary treatment is to discontinue hydrochlorothiazide as rapidly as possible. Prompt medical or surgical treatments may need to be considered if the intraocular pressure remains uncontrolled. Risk factors for developing acute angle-closure glaucoma may include a history of sulfonamide or penicillin allergy.</li><br>
-								</ul>
-								<h5> Pregnancy, Lactation and Fertility:</h5>
-								<ul>
-									<li>- Concor Plus is not recommended during pregnancy. Diuretics may give rise to foetoplacental ischaemia with the attendant risk of foetal hypotrophy. Hydrochlorothiazide is suspected to cause thrombocytopenia in the neonate.</li><br>
-									<li>- Concor Plus is not recommended in breastfeeding women, because bisoprolol may be and hydrochlorothiazide is excreted in breast milk in minimal amounts. Hydrochlorothiazide can inhibit the milk production.</li><br>
-								</ul>
-								<h5>Fertility:</h5>
-								<ul>
-									<li>- No human data on fertility are known for the combination product. Bisoprolol or hydrochlorothiazide had no influence on fertility or on general reproduction performance in animal studies.</li>
-								</ul>
-								<h5>Effects On The Ability To Drive And Use Machines:</h5>
-								<ul>
-									<li>- In general Concor Plus has no or neglible influence on the ability to drive and use machines. However, depending on the individual patients response to treatment the ability to drive a vehicle or to use machines may be impaired. This needs to be considered particularly at start of treatment, upon change of medication, or in conjunction with alcohol.</li><br>
-								</ul>
-
-
-        ]]>
-    </string>
-
-
     <string name="Effects_plus">
         <![CDATA[
 
@@ -826,6 +734,9 @@
         ]]>
     </string>
 
+    <string name="services_url">http://heartgate.co/api_heartgate/</string>
+
+    <string name="services_url_imgs">http://heartgate.co/api_heartgate/layout/images/</string>
 
     <!--
 

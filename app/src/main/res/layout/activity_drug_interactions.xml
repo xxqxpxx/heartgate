@@ -4,20 +4,10 @@
     android:id="@+id/activity_drug_interactions"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
+
     tools:context="dev.cat.mahmoudelbaz.heartgate.drugInteractions.DrugInteractions">
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/register_bg_tr"
-        />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -45,6 +35,8 @@
                 android:layout_alignParentBottom="true"
                 android:src="@drawable/back"
                 android:padding="15dp"
+                android:visibility="gone"
+
                 android:tint="@color/yellow" />
 
 
@@ -67,6 +59,7 @@
 
 
     <LinearLayout
+        android:visibility="invisible"
 
         android:id="@+id/bottomLayout"
         android:layout_width="match_parent"

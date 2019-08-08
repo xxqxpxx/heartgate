@@ -80,7 +80,7 @@ public class RecievedConnections extends Fragment {
         receivedConnectionsAdapter = new AdapterReceivedConnections(activity, receivedConnections);
 
 
-        url = " http://hg.api.digitalcatsite.com/connections/receive_connections/" + userId + "/" + pageId;
+        url = " http://heartgate.co/api_heartgate/connections/receive_connections/" + userId + "/" + pageId;
 
         Log.d(TAG, "Recieved: " + url);
 
@@ -103,7 +103,7 @@ public class RecievedConnections extends Fragment {
                             final String fullName = currentobject.getString("fullname");
                             final String jobTitle = currentobject.getString("speciality");
                             final String picture = currentobject.getString("image_profile");
-                            final String imageUrl = "http://assets.hg.api.digitalcatsite.com/" + picture;
+                            final String imageUrl = "http://heartgate.co/api_heartgate/layout/images/" + picture;
 
                             receivedConnections.add(new ModelMyConnections(stateId, id, fullName, jobTitle, imageUrl));
                             receivedlist.setAdapter(receivedConnectionsAdapter);
@@ -183,7 +183,7 @@ public class RecievedConnections extends Fragment {
 
         receivedprogress.setVisibility(View.VISIBLE);
 
-        url = "http://hg.api.digitalcatsite.com/connections/receive_connections/" + userId + "/" + pageId;
+        url = "http://heartgate.co/api_heartgate/connections/receive_connections/" + userId + "/" + pageId;
 
         StringRequest productsRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -209,7 +209,7 @@ public class RecievedConnections extends Fragment {
                         final String fullName = currentobject.getString("fullname");
                         final String jobTitle = currentobject.getString("speciality");
                         final String picture = currentobject.getString("image_profile");
-                        final String imageUrl = "http://assets.hg.api.digitalcatsite.com/" + picture;
+                        final String imageUrl = "http://heartgate.co/api_heartgate/layout/images/" + picture;
 
                         receivedConnections.add(new ModelMyConnections(stateId, id, fullName, jobTitle, imageUrl));
 

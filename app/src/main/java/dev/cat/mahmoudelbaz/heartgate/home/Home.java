@@ -34,13 +34,11 @@ import java.util.List;
 
 import dev.cat.mahmoudelbaz.heartgate.Login;
 import dev.cat.mahmoudelbaz.heartgate.R;
-import dev.cat.mahmoudelbaz.heartgate.advisoryBoard.AskExperts;
 import dev.cat.mahmoudelbaz.heartgate.concor.Concor;
 import dev.cat.mahmoudelbaz.heartgate.concor.ConcorPrice;
 import dev.cat.mahmoudelbaz.heartgate.concor.Concor_plus;
 import dev.cat.mahmoudelbaz.heartgate.drugInteractions.DrugInteractions;
-import dev.cat.mahmoudelbaz.heartgate.game.View.LoginActivity;
-import dev.cat.mahmoudelbaz.heartgate.heartPress.CardioUpdates;
+ import dev.cat.mahmoudelbaz.heartgate.heartPress.CardioUpdates;
 import dev.cat.mahmoudelbaz.heartgate.heartPress.OnlineLibrary;
 import dev.cat.mahmoudelbaz.heartgate.medicalStatistics.BMI;
 import dev.cat.mahmoudelbaz.heartgate.medicalStatistics.CardioRiskFactor;
@@ -48,7 +46,10 @@ import dev.cat.mahmoudelbaz.heartgate.myAccount.Calender;
 import dev.cat.mahmoudelbaz.heartgate.myAccount.ConnectionsTabs;
 import dev.cat.mahmoudelbaz.heartgate.myAccount.MyProfile;
 import dev.cat.mahmoudelbaz.heartgate.myAccount.NearByDrs;
+import dev.cat.mahmoudelbaz.heartgate.pharamcy.Pharamcy;
 import dev.cat.mahmoudelbaz.heartgate.poll.Survey;
+import dev.cat.mahmoudelbaz.heartgate.advisoryBoard.Questions;
+import dev.cat.mahmoudelbaz.heartgate.videos.VideosListActivity;
 
 public class Home extends AppCompatActivity {
     ProgressBar progress;
@@ -61,7 +62,7 @@ public class Home extends AppCompatActivity {
     HashMap<Menu_item, List<Child_item>> listDataChild;
     TextView logOut;
     SharedPreferences shared;
-    String userID;
+    public static String userID;
     Button btnEdit;
     private int lastExpandedPosition = -1;
 
@@ -90,7 +91,7 @@ public class Home extends AppCompatActivity {
         userID = shared.getString("id", "0");
 
 
-        url = "http://hg.api.digitalcatsite.com/users/current/" + userID;
+        url = "http://heartgate.co/api_heartgate/users/current/" + userID;
 
         StringRequest loginRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -105,7 +106,7 @@ public class Home extends AppCompatActivity {
                     final String namestring = res.getString("fullname");
                     final String emailstring = res.getString("email");
                     final String imgstring = res.getString("image_profile");
-                    final String imgurl = "http://assets.hg.api.digitalcatsite.com/" + imgstring;
+                    final String imgurl = "http://heartgate.co/api_heartgate/layout/images/" + imgstring;
 
                     name.setText(namestring);
                     email.setText(emailstring);
@@ -154,18 +155,15 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "00201146121111"));
-                if (ActivityCompat.checkSelfPermission(Home.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:00201146121111"));
+
+                if (ActivityCompat.checkSelfPermission(Home.this,
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }
-                startActivity(intent);
+                startActivity(callIntent);
+
 
             }
         });
@@ -391,8 +389,8 @@ public class Home extends AppCompatActivity {
 
                     switch (childPosition) {
                         case 0:
-                            i = new Intent(Home.this, AskExperts.class);
-                            startActivity(i);
+                           i = new Intent(Home.this, Questions.class);
+                           startActivity(i);
                             break; // optional
 
                         default: // Optional
@@ -425,11 +423,18 @@ public class Home extends AppCompatActivity {
 
                 } else if (groupPosition == 7) {
 
-                    i = new Intent(Home.this, LoginActivity.class);
+                    i = new Intent(Home.this, Pharamcy.class);
                     startActivity(i);
-                    finish();
 
                 }
+
+                else if (groupPosition == 8) {
+
+                    i = new Intent(Home.this, VideosListActivity.class);
+                    startActivity(i);
+
+                }
+
 
 
                 return true;
@@ -461,7 +466,9 @@ public class Home extends AppCompatActivity {
         listDataHeader.add(new Menu_item("Drug Interactions", R.drawable.white_frame, R.drawable.icondrug));
         listDataHeader.add(new Menu_item("Poll", R.drawable.white_frame, R.drawable.iconsurvey));
         listDataHeader.add(new Menu_item("Pharmacy", R.drawable.white_frame, R.drawable.ic_stat_onesignal_default));
-        listDataHeader.add(new Menu_item("Game", R.drawable.white_frame, R.drawable.food_ico));
+        listDataHeader.add(new Menu_item("Video", R.drawable.white_frame, R.drawable.iconvideo));
+
+        //      listDataHeader.add(new Menu_item("Game", R.drawable.white_frame, R.drawable.food_ico));
 
 
         // Adding child data
@@ -480,7 +487,7 @@ public class Home extends AppCompatActivity {
 
         List<Child_item> heartPress = new ArrayList<Child_item>();
         heartPress.add(new Child_item("Cardiovascular updates", R.drawable.heartpressbg));
-        heartPress.add(new Child_item("Online library", R.drawable.heartpressbg));
+        heartPress.add(new Child_item("Library", R.drawable.heartpressbg));
 
 
         List<Child_item> medicalStatics = new ArrayList<Child_item>();
@@ -500,6 +507,14 @@ public class Home extends AppCompatActivity {
         pull.add(new Child_item("Public Survey", R.drawable.pullbg));
         pull.add(new Child_item("Private Survey", R.drawable.pullbg));
 
+        List<Child_item> Pharmacy = new ArrayList<Child_item>();
+        Pharmacy.add(new Child_item("Pharmacy", R.drawable.drugbg));
+
+        List<Child_item> Game = new ArrayList<Child_item>();
+        Game.add(new Child_item("Game", R.drawable.drugbg));
+
+        List<Child_item> video = new ArrayList<Child_item>();
+        video.add(new Child_item("video", R.drawable.drugbg));
 
         listDataChild.put(listDataHeader.get(0), myAccount); // Header, Child data
         listDataChild.put(listDataHeader.get(1), concor);
@@ -508,6 +523,10 @@ public class Home extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(4), advisory);
         listDataChild.put(listDataHeader.get(5), drug);
         listDataChild.put(listDataHeader.get(6), pull);
+        listDataChild.put(listDataHeader.get(7), Pharmacy);
+        listDataChild.put(listDataHeader.get(8), video);
+
+        //      listDataChild.put(listDataHeader.get(6), Game);
 
     }
 }

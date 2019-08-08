@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/semi_black"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Q&amp;A"
+            android:textColor="@color/black"
+
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:textSize="25sp"  />
+
+        <ImageView
+            android:id="@+id/bck"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:visibility="invisible"
+
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/top"
+        android:id="@+id/textlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:background="@color/yellow"
+        android:layout_margin="25dp"
+        android:padding="7dp">
+        <TextView
+            android:id="@+id/txtAddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ask Question"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="60dp"
+        android:layout_below="@+id/textlayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:paddingRight="15dp">
+
+            <android.support.v7.widget.RecyclerView
+            android:id="@+id/mylistView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:dividerHeight="10dp"
+            android:divider="@color/transparent"/>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <TextView
+        android:id="@+id/mytxtEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="No Questions"
+        android:textSize="35sp"
+        android:textColor="@color/black"/>
+
+
+</RelativeLayout>

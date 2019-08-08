@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
@@ -15,10 +14,8 @@ import java.util.HashMap;
 import java.util.List;
 
 import dev.cat.mahmoudelbaz.heartgate.R;
-import dev.cat.mahmoudelbaz.heartgate.advisoryBoard.AskExperts;
 import dev.cat.mahmoudelbaz.heartgate.drugInteractions.DrugInteractions;
-import dev.cat.mahmoudelbaz.heartgate.game.View.LoginActivity;
-import dev.cat.mahmoudelbaz.heartgate.heartPress.CardioUpdates;
+ import dev.cat.mahmoudelbaz.heartgate.heartPress.CardioUpdates;
 import dev.cat.mahmoudelbaz.heartgate.heartPress.OnlineLibrary;
 import dev.cat.mahmoudelbaz.heartgate.home.Child_item;
 import dev.cat.mahmoudelbaz.heartgate.home.ExpandableListAdapter;
@@ -31,6 +28,7 @@ import dev.cat.mahmoudelbaz.heartgate.myAccount.ConnectionsTabs;
 import dev.cat.mahmoudelbaz.heartgate.myAccount.MyProfile;
 import dev.cat.mahmoudelbaz.heartgate.myAccount.NearByDrs;
 import dev.cat.mahmoudelbaz.heartgate.poll.Survey;
+import dev.cat.mahmoudelbaz.heartgate.advisoryBoard.Questions;
 
 public class Concor extends AppCompatActivity {
 
@@ -271,7 +269,7 @@ public class Concor extends AppCompatActivity {
 
                     switch (childPosition) {
                         case 0:
-                            i = new Intent(Concor.this, AskExperts.class);
+                            i = new Intent(Concor.this, Questions.class);
                             startActivity(i);
                             break; // optional
 
@@ -303,13 +301,13 @@ public class Concor extends AppCompatActivity {
                             // Statements
                     }
 
-                } else if (groupPosition == 7) {
+                } /*else if (groupPosition == 7) {
 
                     i = new Intent(Concor.this, LoginActivity.class);
                     startActivity(i);
                     finish();
 
-                }
+                }*/
 
 
                 return true;

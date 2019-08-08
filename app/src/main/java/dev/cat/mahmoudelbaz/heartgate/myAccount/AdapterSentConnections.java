@@ -145,7 +145,7 @@ public class AdapterSentConnections extends BaseAdapter implements Filterable {
                     String receiveIdString = Integer.toString(receiveId);
 
 
-                    url = "http://hg.api.digitalcatsite.com/messages/connectuser/cancel/" + product.getStateId();
+                    url = "http://heartgate.co/api_heartgate/messages/connectuser/cancel/" + product.getStateId();
 
                     StringRequest loginRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override

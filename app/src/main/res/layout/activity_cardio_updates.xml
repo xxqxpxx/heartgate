@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
 android:id="@+id/activity_concor_price"
 android:layout_width="match_parent"
 android:orientation="vertical"
-android:background="@drawable/register_bg_tr"
+    android:background="@drawable/bg"
 android:layout_height="match_parent"
 tools:context="dev.cat.mahmoudelbaz.heartgate.concor.ConcorPrice">
+
 
 <LinearLayout
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,6 +41,8 @@ tools:context="dev.cat.mahmoudelbaz.heartgate.concor.ConcorPrice">
                 android:layout_alignParentBottom="true"
                 android:src="@drawable/back"
                 android:padding="15dp"
+                android:visibility="gone"
+
                 android:tint="@color/yellow" />
 
 
@@ -56,7 +60,27 @@ tools:context="dev.cat.mahmoudelbaz.heartgate.concor.ConcorPrice">
                 android:layout_marginRight="10dp" />
         </RelativeLayout>
     </RelativeLayout>
-    <android.support.v7.widget.RecyclerView
+
+    <EditText
+        android:id="@+id/nearBysearch_view"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:drawablePadding="10dp"
+        android:hint="Search for Connections"
+        android:textSize="16sp" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <ListView
+
         android:layout_width="match_parent"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
@@ -65,8 +89,9 @@ tools:context="dev.cat.mahmoudelbaz.heartgate.concor.ConcorPrice">
         android:id="@+id/Recycle_view_cardoivascular"
         android:layout_height="wrap_content">
 
-    </android.support.v7.widget.RecyclerView>
+    </ListView>
     <LinearLayout
+        android:visibility="invisible"
 
         android:id="@+id/bottomLayout"
         android:layout_width="match_parent"

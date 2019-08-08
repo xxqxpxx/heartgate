@@ -152,7 +152,7 @@ public class AdapterReceivedConnections extends BaseAdapter implements Filterabl
                     String receiveIdString = Integer.toString(receiveId);
 
 
-                    url = "http://hg.api.digitalcatsite.com/messages/connectuser/approve/" + product.getStateId();
+                    url = "http://heartgate.co/api_heartgate/messages/connectuser/approve/" + product.getStateId();
 
                     JSONObject jsobj = new JSONObject();
                     try {
@@ -198,7 +198,7 @@ public class AdapterReceivedConnections extends BaseAdapter implements Filterabl
                     String receiveIdString = Integer.toString(receiveId);
 
 
-                    url = "http://hg.api.digitalcatsite.com/messages/connectuser/approve/" + product.getStateId();
+                    url = "http://heartgate.co/api_heartgate/messages/connectuser/approve/" + product.getStateId();
 
                     JSONObject jsobj = new JSONObject();
                     try {

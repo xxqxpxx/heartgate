@@ -69,7 +69,7 @@ public class NearByDrs extends AppCompatActivity {
         nearByConnectionsAdapter = new AdapterNearBy(this, nearByConnections);
 
 
-        url = "http://hg.api.digitalcatsite.com/nearby_drs/" + userId + "/" + pageId;
+        url = "http://heartgate.co/api_heartgate/nearby_drs/" + userId + "/" + pageId;
 
         Log.d(TAG, "Recieved: " + url);
 
@@ -92,7 +92,7 @@ public class NearByDrs extends AppCompatActivity {
                             final String fullName = currentobject.getString("fullname");
                             final String jobTitle = currentobject.getString("speciality");
                             final String picture = currentobject.getString("image_profile");
-                            final String imageUrl = "http://assets.hg.api.digitalcatsite.com/" + picture;
+                            final String imageUrl = "http://heartgate.co/api_heartgate/layout/images/" + picture;
 
                             nearByConnections.add(new ModelMyConnections(stateId, id, fullName, jobTitle, imageUrl));
                             nearBylist.setAdapter(nearByConnectionsAdapter);
@@ -170,7 +170,7 @@ public class NearByDrs extends AppCompatActivity {
 
         nearByprogress.setVisibility(View.VISIBLE);
 
-        url = "http://hg.api.digitalcatsite.com/nearby_drs/" + userId + "/" + pageId;
+        url = "http://heartgate.co/api_heartgate/nearby_drs/" + userId + "/" + pageId;
 
         StringRequest productsRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -196,7 +196,7 @@ public class NearByDrs extends AppCompatActivity {
                         final String fullName = currentobject.getString("fullname");
                         final String jobTitle = currentobject.getString("speciality");
                         final String picture = currentobject.getString("image_profile");
-                        final String imageUrl = "http://assets.hg.api.digitalcatsite.com/" + picture;
+                        final String imageUrl = "http://heartgate.co/api_heartgate/layout/images/" + picture;
 
                         nearByConnections.add(new ModelMyConnections(stateId, id, fullName, jobTitle, imageUrl));
 

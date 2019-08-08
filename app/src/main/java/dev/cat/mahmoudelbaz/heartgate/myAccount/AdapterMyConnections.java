@@ -1,6 +1,7 @@
 package dev.cat.mahmoudelbaz.heartgate.myAccount;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,7 +24,10 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import dev.cat.mahmoudelbaz.heartgate.Login;
 import dev.cat.mahmoudelbaz.heartgate.R;
+import dev.cat.mahmoudelbaz.heartgate.chat.chatActivity;
+import dev.cat.mahmoudelbaz.heartgate.home.Home;
 
 import static android.content.ContentValues.TAG;
 
@@ -143,6 +147,13 @@ public class AdapterMyConnections extends BaseAdapter implements Filterable {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(context, "Message Clicked", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(context, chatActivity.class);
+                    i.putExtra("receiveId" , product.getId() );
+                    i.putExtra("name" , product.getName() );
+                    i.putExtra("imageUrl" , product.getImageUrl() );
+
+                    context.startActivity(i);
+                   // finish();
                 }
             });
 
@@ -154,8 +165,7 @@ public class AdapterMyConnections extends BaseAdapter implements Filterable {
                     int receiveId = product.getId();
                     String receiveIdString = Integer.toString(receiveId);
 
-
-                    url = "http://hg.api.digitalcatsite.com/messages/connectuser/disconnect/" + product.getStateId();
+                    url = "http://heartgate.co/api_heartgate/messages/connectuser/disconnect/" + product.getStateId();
 
                     StringRequest loginRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override

@@ -7,14 +7,20 @@
     android:background="@drawable/bg"
     tools:context="dev.cat.mahmoudelbaz.heartgate.home.Home">
 
-    <ImageView
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:src="@drawable/profile"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
         android:id="@+id/imgProfile"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="125dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/profile" />
+        />
 
     <Button
         android:id="@+id/btnEdit"
@@ -61,23 +67,28 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
         android:childDivider="@color/transparent"
+        android:layout_centerInParent="true"
         android:divider="@color/transparent"
         android:dividerHeight="1dp" />
 
 
     <TextView
         android:id="@+id/txt_call_support"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottomLayout"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="30dp"
         android:text="Call Support"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="30dp" />
 
 
     <LinearLayout
+        android:visibility="invisible"
 
         android:id="@+id/bottomLayout"
         android:layout_width="match_parent"

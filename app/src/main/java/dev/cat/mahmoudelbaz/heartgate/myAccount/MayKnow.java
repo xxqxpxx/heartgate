@@ -77,7 +77,7 @@ public class MayKnow extends Fragment {
         MayKnowAdapter = new AdapterMayKnow(activity, mayKnow);
 
 
-        url = "http://hg.api.digitalcatsite.com/connections/find_connections/" + userId + "/" + pageId;
+        url = "http://heartgate.co/api_heartgate/connections/find_connections/" + userId + "/" + pageId;
 
         StringRequest productsRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -97,7 +97,7 @@ public class MayKnow extends Fragment {
                             final String fullName = currentobject.getString("fullname");
                             final String jobTitle = currentobject.getString("speciality");
                             final String picture = currentobject.getString("image_profile");
-                            final String imageUrl = "http://assets.hg.api.digitalcatsite.com/" + picture;
+                            final String imageUrl = "http://heartgate.co/api_heartgate/layout/images/" + picture;
 
 //                            mayKnow.add(0,new ModelMyConnections(0, id, fullName, jobTitle, imageUrl));
                             mayKnow.add(new ModelMyConnections(0, id, fullName, jobTitle, imageUrl));
@@ -178,7 +178,7 @@ public class MayKnow extends Fragment {
 
         mayprogress.setVisibility(View.VISIBLE);
 
-        url = "http://hg.api.digitalcatsite.com/connections/find_connections/" + userId + "/" + pageId;
+        url = "http://heartgate.co/api_heartgate/connections/find_connections/" + userId + "/" + pageId;
 
         StringRequest productsRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -203,7 +203,7 @@ public class MayKnow extends Fragment {
                         final String fullName = currentobject.getString("fullname");
                         final String jobTitle = currentobject.getString("speciality");
                         final String picture = currentobject.getString("image_profile");
-                        final String imageUrl = "http://assets.hg.api.digitalcatsite.com/" + picture;
+                        final String imageUrl = "http://heartgate.co/api_heartgate/layout/images/" + picture;
 
                         mayKnow.add(new ModelMyConnections(0, id, fullName, jobTitle, imageUrl));
 

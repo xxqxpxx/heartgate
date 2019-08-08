@@ -179,7 +179,7 @@ public class SignUp extends AppCompatActivity {
 
                     progress.setVisibility(View.VISIBLE);
 //                    url="https://www.digitalcatsite.com/api_heartgate/users/add";
-                    url = "http://hg.api.digitalcatsite.com/users/add";
+                    url = "http://heartgate.co/api_heartgate/users/add";
 
                     JSONObject jsobj = new JSONObject();
                     try {

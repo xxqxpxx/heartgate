@@ -137,6 +137,7 @@ public class AdapterNearBy extends BaseAdapter implements Filterable {
             }
 
             Picasso.with(context).load(url).placeholder(R.drawable.profile).error(R.drawable.profile).into(imageView);
+
         }
     }
 

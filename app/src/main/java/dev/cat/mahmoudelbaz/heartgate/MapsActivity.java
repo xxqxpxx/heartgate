@@ -154,7 +154,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         String myUserID = shared.getString("id", "0");
 
-        String finalUrl = "http://hg.api.digitalcatsite.com/users/nearby/" + myUserID + "/0";
+        String finalUrl = "http://heartgate.co/api_heartgate/users/nearby/" + myUserID + "/0";
         final StringRequest postsRequest = new StringRequest(
                 Request.Method.GET, finalUrl, new Response.Listener<String>() {
             @Override
@@ -171,7 +171,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         String lng = current.getString("lng");
                         String nme = current.getString("fullname");
                         String speciality = current.getString("speciality");
-                        String pic = "http://assets.hg.api.digitalcatsite.com/" + current.getString("image_profile");
+                        String pic = "http://heartgate.co/api_heartgate/layout/images/" + current.getString("image_profile");
 
                         if (!(lat.equals("") || lng.equals(""))) {
                             LatLng l = new LatLng(Double.parseDouble(lat), Double.parseDouble(lng));
@@ -218,7 +218,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 ////                String myUserID = shared.getString("id", "0");
 //
 //
-//                String myurl = "http://hg.api.digitalcatsite.com/users/location";
+//                String myurl = "http://heartgate.co/api_heartgate/users/location";
 //
 //                JSONObject jsobj = new JSONObject();
 //                try {

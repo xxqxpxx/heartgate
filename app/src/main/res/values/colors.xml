@@ -7,24 +7,10 @@
 
     <color name="transparent">#00ffffff</color>
     <color name="white">#FFFFFF</color>
-    <color name="yelloww">#FFFF00</color>
-    <color name="fuchsia">#FF00FF</color>
     <color name="red">#FF0000</color>
-    <color name="silver">#C0C0C0</color>
-    <color name="gray">#ffffff</color>
-    <color name="olive">#808000</color>
-    <color name="purple">#800080</color>
-    <color name="maroon">#800000</color>
-    <color name="aqua">#00FFFF</color>
-    <color name="lime">#00FF00</color>
-    <color name="teal">#008080</color>
     <color name="green">#008000</color>
-    <color name="blue">#0000FF</color>
     <color name="not_blue">#0077ff</color>
-    <color name="semi_blue">#5757d9</color>
-    <color name="navy">#000080</color>
     <color name="black">#000000</color>
-    <color name="text_sub_two">#9a9999</color>
 
 
     <color name="semi_white">#90ffffff</color>
@@ -40,12 +26,6 @@
     <color name="drug_background">#d063ff</color>
     <color name="pull_background">#61daff</color>
     <color name="subMenu_background">#c0cf6666</color>
-
-    <color name="DarkYello">#ecdd67</color>
-    <color name="brown">#85361b</color>
-    <color name="lightBlue">#40c5ea</color>
-
-
 
 
 </resources>

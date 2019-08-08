@@ -5,12 +5,6 @@
             <solid android:color="@color/subMenu_background"/>
             <!--<stroke android:width="1dp" android:color="@color/white" /> &lt;!&ndash; Border colour &ndash;&gt;-->
 
-            <corners
-                android:bottomRightRadius="15dp"
-                android:bottomLeftRadius="15dp"
-                android:topLeftRadius="15dp"
-                android:topRightRadius="15dp"/>
-
         </shape>
     </item>
 </layer-list>

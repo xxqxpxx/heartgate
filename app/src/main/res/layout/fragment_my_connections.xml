@@ -11,10 +11,8 @@
         android:drawableLeft="@android:drawable/ic_menu_search"
         android:drawablePadding="10dp"
         android:hint="Search for Connections"
-        android:textSize="16sp" />
-
-
-
+        android:textSize="16sp"
+        android:inputType="text" />
 
     <ListView
         android:id="@+id/mylistView"

@@ -15,7 +15,7 @@ public class RetroWeb {
         if (retrofit == null) {
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl("http://hg.api.digitalcatsite.com/")
+                    .baseUrl("http://heartgate.co/api_heartgate/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(new okhttp3.OkHttpClient.Builder()
                             .connectTimeout(30, TimeUnit.SECONDS)

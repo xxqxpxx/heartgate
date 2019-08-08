@@ -31,9 +31,9 @@ import dev.cat.mahmoudelbaz.heartgate.signUp.Disclaimer;
 public class Login extends AppCompatActivity {
 
     ProgressBar progress;
-    Button login, signup;
+    ImageView login, signup;
     EditText email, password;
-    TextView forgotpassword;
+    ImageView forgotpassword;
     String url;
     SharedPreferences shared;
     String idcheck;
@@ -46,7 +46,6 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         shared = getSharedPreferences("id", Context.MODE_PRIVATE);
 
 
@@ -56,21 +55,19 @@ public class Login extends AppCompatActivity {
             idcheck = "0";
         }
 
-
         if (!idcheck.equals("0")) {
             Intent i = new Intent(Login.this, Home.class);
             startActivity(i);
             finish();
         }
 
-
-        gateTop = (ImageView) findViewById(R.id.topGate);
-        gateBottom = (ImageView) findViewById(R.id.bottmGate);
+ //       gateTop = (ImageView) findViewById(R.id.topGate);
+ //       gateBottom = (ImageView) findViewById(R.id.bottmGate);
         progress = (ProgressBar) findViewById(R.id.progressBar);
-        login = (Button) findViewById(R.id.login);
-        signup = (Button) findViewById(R.id.signUp);
+        login =   findViewById(R.id.login);
+        signup =  findViewById(R.id.signUp);
 
-        forgotpassword = (TextView) findViewById(R.id.forgotpass);
+        forgotpassword = findViewById(R.id.forgotpass);
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         // load the animation
@@ -83,7 +80,7 @@ public class Login extends AppCompatActivity {
         progress.setVisibility(View.INVISIBLE);
 
 
-        gateBottom.setOnClickListener(new View.OnClickListener() {
+      /*  gateBottom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gateTop.startAnimation(animSlidUp);
@@ -93,7 +90,7 @@ public class Login extends AppCompatActivity {
                 gateBottom.setVisibility(View.GONE);
 
             }
-        });
+        });*/
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,20 +101,17 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(Login.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
                     progress.setVisibility(View.VISIBLE);
-                    url = "http://hg.api.digitalcatsite.com/login/" + emailtxt + "/" + passwordtxt;
+                    url = "http://heartgate.co/api_heartgate/login/" + emailtxt + "/" + passwordtxt;
 
                     StringRequest loginRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
 
                             try {
-
-
 //                                JSONArray usersarray = new JSONArray(response);
 
                                 JSONObject res = new JSONObject(response);
                                 final int responseValue = res.getInt("state");
-
 
                                 if (responseValue == 0) {
 

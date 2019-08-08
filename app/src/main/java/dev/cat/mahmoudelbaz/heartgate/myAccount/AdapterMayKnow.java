@@ -148,7 +148,7 @@ public class AdapterMayKnow extends BaseAdapter implements Filterable {
                     String receiveIdString = Integer.toString(receiveId);
 
 
-                    url = "http://hg.api.digitalcatsite.com/messages/connectuser/add";
+                    url = "http://heartgate.co/api_heartgate/messages/connectuser/add";
 
                     JSONObject jsobj = new JSONObject();
                     try {
