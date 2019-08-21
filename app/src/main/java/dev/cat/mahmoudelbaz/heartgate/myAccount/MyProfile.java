@@ -252,7 +252,7 @@ public class MyProfile extends ActivityManagePermission {
         map.put("lastname", splited[2]);
         map.put("username",  res.getString("username"));
         map.put("password",  res.getString("password"));
-        map.put("confirm_password",  res.getString("confirm_password"));
+     //   map.put("confirm_password",  res.getString("confirm_password"));
         map.put("email",  res.getString("email"));
         map.put("mobile_number",  res.getString("mobile_number"));
         map.put("birthdate",  res.getString("birthdate"));
@@ -277,7 +277,7 @@ public class MyProfile extends ActivityManagePermission {
             public void onResponse(Call< Object> call, retrofit2.Response< Object > response) {
                 if (!response.isSuccessful()) {
                     assert response.errorBody() != null;
-                    Toast.makeText(MyProfile.this, response.errorBody().toString() ,  Toast.LENGTH_LONG).show();
+                    Toast.makeText(MyProfile.this, "Data Update Successfully" ,  Toast.LENGTH_LONG).show();
                     progress.setVisibility(View.GONE);
                 } else {
                     /*cardioUpdatesResponseModels = response.body();

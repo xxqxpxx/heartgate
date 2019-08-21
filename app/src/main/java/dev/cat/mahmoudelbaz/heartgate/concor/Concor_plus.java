@@ -330,13 +330,13 @@ public class Concor_plus extends AppCompatActivity {
         listDataChild = new HashMap<Menu_item, List<Child_item>>();
 
         // Adding child data
-        listDataHeader.add(new Menu_item("Composition And Pharmaceutical Form", R.drawable.white_frame, R.drawable.iconaccount));
-        listDataHeader.add(new Menu_item("Indication", R.drawable.white_frame, R.drawable.iconconcor));
-        listDataHeader.add(new Menu_item("Dosage / Administration", R.drawable.white_frame, R.drawable.iconheartpress));
-        listDataHeader.add(new Menu_item("Contraindications / Interaction", R.drawable.white_frame, R.drawable.iconstatics));
-        listDataHeader.add(new Menu_item("Composition And Pharmaceutical Form", R.drawable.white_frame, R.drawable.iconadvisor));
-        listDataHeader.add(new Menu_item("Undesirable Effects / Effects On Ability To Drive And Use Machines", R.drawable.white_frame, R.drawable.iconsurvey));
-        listDataHeader.add(new Menu_item("Overdose", R.drawable.white_frame, R.drawable.ic_stat_onesignal_default));
+        listDataHeader.add(new Menu_item("Composition And Pharmaceutical Form", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Indication", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Dosage / Administration", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Contraindications / Interaction", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Composition And Pharmaceutical Form", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Undesirable Effects / Effects On Ability To Drive And Use Machines", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Overdose", R.drawable.white_frame, R.color.transparent));
 
         // Adding child data
         List<Child_item> Composition = new ArrayList<Child_item>();

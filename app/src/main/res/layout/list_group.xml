@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
@@ -31,9 +32,18 @@
         android:layout_height="fill_parent"
         android:gravity="center_vertical"
         android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
         android:textColor="#ffffff"
-        android:textSize="18sp" />
+        android:paddingTop="5dp"
+        android:paddingBottom="7dp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeMaxTextSize="18sp"
+        app:autoSizeStepGranularity="2sp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:paddingEnd="5dp"
+
+        />
 
     </LinearLayout>
 </LinearLayout>

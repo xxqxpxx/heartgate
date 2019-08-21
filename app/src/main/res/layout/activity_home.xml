@@ -69,7 +69,9 @@
         android:childDivider="@color/transparent"
         android:layout_centerInParent="true"
         android:divider="@color/transparent"
-        android:dividerHeight="1dp" />
+        android:dividerHeight="5dp"
+
+        />
 
 
     <TextView

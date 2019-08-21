@@ -146,12 +146,11 @@ public class AdapterMyConnections extends BaseAdapter implements Filterable {
             messagebtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, "Message Clicked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Please Wait", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(context, chatActivity.class);
                     i.putExtra("receiveId" , product.getId() );
                     i.putExtra("name" , product.getName() );
                     i.putExtra("imageUrl" , product.getImageUrl() );
-
                     context.startActivity(i);
                    // finish();
                 }

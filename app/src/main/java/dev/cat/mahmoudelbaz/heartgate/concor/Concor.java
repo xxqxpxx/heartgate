@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
@@ -332,17 +333,17 @@ public class Concor extends AppCompatActivity {
         listDataChild = new HashMap<Menu_item, List<Child_item>>();
 
         // Adding child data
-        listDataHeader.add(new Menu_item("Composition And Pharmaceutical Form", R.drawable.white_frame, R.drawable.iconaccount));
-        listDataHeader.add(new Menu_item("Indication", R.drawable.white_frame, R.drawable.iconconcor));
-        listDataHeader.add(new Menu_item("Dosage / Administration", R.drawable.white_frame, R.drawable.iconheartpress));
-        listDataHeader.add(new Menu_item("Contraindications / Interaction", R.drawable.white_frame, R.drawable.iconstatics));
-        listDataHeader.add(new Menu_item("Warnings And Precautions", R.drawable.white_frame, R.drawable.iconadvisor));
-        listDataHeader.add(new Menu_item("Pregnancy And Lactation", R.drawable.white_frame, R.drawable.icondrug));
-        listDataHeader.add(new Menu_item("Undesirable Effects / Effects On Ability To Drive And Use Machines", R.drawable.white_frame, R.drawable.iconsurvey));
-        listDataHeader.add(new Menu_item("Overdose", R.drawable.white_frame, R.drawable.ic_stat_onesignal_default));
-        listDataHeader.add(new Menu_item("Properties/ Effects", R.drawable.white_frame, R.drawable.food_ico));
-        listDataHeader.add(new Menu_item("Pharmacokinetics", R.drawable.white_frame, R.drawable.food_ico));
-        listDataHeader.add(new Menu_item("Preclinical Data", R.drawable.white_frame, R.drawable.food_ico));
+        listDataHeader.add(new Menu_item("Composition And Pharmaceutical Form", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Indication", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Dosage / Administration", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Contraindications / Interaction", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Warnings And Precautions", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Pregnancy And Lactation", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Undesirable Effects / Effects On Ability To Drive And Use Machines", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Overdose", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Properties/ Effects", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Pharmacokinetics", R.drawable.white_frame, R.color.transparent));
+        listDataHeader.add(new Menu_item("Preclinical Data", R.drawable.white_frame, R.color.transparent));
 
 
         // Adding child data

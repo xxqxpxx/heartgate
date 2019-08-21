@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
-    >
+    android:layout_marginBottom="5dp">
 
     <RelativeLayout
         android:id="@+id/listcolor"
@@ -15,16 +14,20 @@
         android:background="@drawable/submenu_bg">
 
         <TextView
-            android:layout_centerVertical="true"
+             android:layout_centerInParent="true"
             android:id="@+id/lblListItem"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp"
-            android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
-            />
+             android:textColor="@color/black"
+            android:paddingTop="5dp"
+            android:paddingBottom="7dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="18sp"
+            app:autoSizeStepGranularity="2sp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingEnd="5dp" />
 
 
         <WebView

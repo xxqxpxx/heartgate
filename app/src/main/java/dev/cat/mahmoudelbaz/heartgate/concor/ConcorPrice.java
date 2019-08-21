@@ -27,8 +27,23 @@ public class ConcorPrice extends AppCompatActivity {
         RecycleViewPriceCornar.setHasFixedSize(true);
         RecycleViewPriceCornar.setLayoutManager(new LinearLayoutManager(ConcorPrice.this));
 
-        MyModel myModel = new MyModel("aziz","1290");
+
+
+        MyModel myModel = new MyModel("Concor 2.5-","32.75 L.E");
         cornrPriceModels.add(myModel);
+
+        myModel = new MyModel("Concor 5-","40.5 L.E");
+        cornrPriceModels.add(myModel);
+
+        myModel = new MyModel("Concor 5 Plus-","40.5 L.E");
+        cornrPriceModels.add(myModel);
+
+        myModel = new MyModel("Concor 10-","56.25 L.E");
+        cornrPriceModels.add(myModel);
+
+        myModel = new MyModel("Concor 10 Plus-","63 L.E");
+        cornrPriceModels.add(myModel);
+
         RecycleViewPriceCornar.setAdapter(new ConcorAdapter(ConcorPrice.this,cornrPriceModels));
 
     }

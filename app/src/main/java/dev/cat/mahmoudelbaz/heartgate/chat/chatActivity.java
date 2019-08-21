@@ -1,7 +1,6 @@
 package dev.cat.mahmoudelbaz.heartgate.chat;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,27 +14,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.text.SimpleDateFormat;
-
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.squareup.picasso.Picasso;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
-
-import dev.cat.mahmoudelbaz.heartgate.Login;
 import dev.cat.mahmoudelbaz.heartgate.R;
-import dev.cat.mahmoudelbaz.heartgate.home.Home;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
@@ -212,6 +203,12 @@ public class chatActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         socket.disconnect();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        socket.close();
     }
 
     private Emitter.Listener onConnectError = new Emitter.Listener() {
