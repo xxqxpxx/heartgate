@@ -4,149 +4,18 @@
 
     <string name="speciality_prompt">Speciality</string>
 
-    <string-array name="speciality_array">
-        <item>Speciality:</item>
-        <item>Cardiologist</item>
-        <item>Internist</item>
-        <item>General Practitioner</item>
-        <item>other</item>
-    </string-array>
-
-
     <string name="jobTitle_prompt">Job Title</string>
 
-    <string-array name="jobTitle_array">
-        <item>JobTitle:</item>
-        <item>Doctor</item>
-        <item>Professor/Assistant Professor</item>
-        <item>Lecture/Assistant Lecture</item>
-        <item>Specialist</item>
-        <item>Consultant</item>
-        <item>Other</item>
-    </string-array>
 
     <string name="currentLiving_prompt">Current Living Place</string>
 
-    <string-array name="currentLiving_array">
-        <item>Current Living Place:</item>
-        <item>6th of October</item>
-        <item>Alexandria</item>
-        <item>Aswan</item>
-        <item>Asyut</item>
-        <item>Behira</item>
-        <item>Beni Suef</item>
-        <item>Cairo</item>
-        <item>Dakahlia</item>
-        <item>Damietta</item>
-        <item>Faiyum</item>
-        <item>Gharbia</item>
-        <item>Giza</item>
-        <item>Helwan</item>
-        <item>Ismailia</item>
-        <item>Kafr El-Sheikh</item>
-        <item>Luxor</item>
-        <item>Matruh</item>
-        <item>Minya</item>
-        <item>Monufia</item>
-        <item>New Valley</item>
-        <item>North Sinai</item>
-        <item>Port Said</item>
-        <item>Qalyubia</item>
-        <item>Qena</item>
-        <item>Sharqia</item>
-        <item>Sohag</item>
-        <item>South Sinai</item>
-        <item>Suez</item>
-    </string-array>
-
     <string name="currentWork_prompt">Current Work Place</string>
-
-    <string-array name="currentWork_array">
-        <item>Current Work Place:</item>
-        <item>6th of October</item>
-        <item>Alexandria</item>
-        <item>Aswan</item>
-        <item>Asyut</item>
-        <item>Behira</item>
-        <item>Beni Suef</item>
-        <item>Cairo</item>
-        <item>Dakahlia</item>
-        <item>Damietta</item>
-        <item>Faiyum</item>
-        <item>Gharbia</item>
-        <item>Giza</item>
-        <item>Helwan</item>
-        <item>Ismailia</item>
-        <item>Kafr El-Sheikh</item>
-        <item>Luxor</item>
-        <item>Matruh</item>
-        <item>Minya</item>
-        <item>Monufia</item>
-        <item>New Valley</item>
-        <item>North Sinai</item>
-        <item>Port Said</item>
-        <item>Qalyubia</item>
-        <item>Qena</item>
-        <item>Sharqia</item>
-        <item>Sohag</item>
-        <item>South Sinai</item>
-        <item>Suez</item>
-    </string-array>
 
     <string name="previousWork_prompt">Previous Work Place</string>
 
-    <string-array name="previousWork_array">
-        <item>Previous Work Place:</item>
-        <item>6th of October</item>
-        <item>Alexandria</item>
-        <item>Aswan</item>
-        <item>Asyut</item>
-        <item>Behira</item>
-        <item>Beni Suef</item>
-        <item>Cairo</item>
-        <item>Dakahlia</item>
-        <item>Damietta</item>
-        <item>Faiyum</item>
-        <item>Gharbia</item>
-        <item>Giza</item>
-        <item>Helwan</item>
-        <item>Ismailia</item>
-        <item>Kafr El-Sheikh</item>
-        <item>Luxor</item>
-        <item>Matruh</item>
-        <item>Minya</item>
-        <item>Monufia</item>
-        <item>New Valley</item>
-        <item>North Sinai</item>
-        <item>Port Said</item>
-        <item>Qalyubia</item>
-        <item>Qena</item>
-        <item>Sharqia</item>
-        <item>Sohag</item>
-        <item>South Sinai</item>
-        <item>Suez</item>
-    </string-array>
-
-
     <string name="yearsOfExp_prompt">Years Of Experience</string>
 
-    <string-array name="yearsOfExp_array">
-        <item>Years Of Experience:</item>
-        <item>1-3</item>
-        <item>3-5</item>
-        <item>5-7</item>
-        <item>7-10</item>
-        <item>More than 10 years</item>
-    </string-array>
     <string name="action_settings">Settings</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-
-
-    // Html static data
 
     <string name="composition">
         <![CDATA[
@@ -179,7 +48,6 @@
     ]]>
     </string>
 
-
     <string name="Indication">
         <![CDATA[
                    <h4>Essential hypertension.</h4>
@@ -189,7 +57,6 @@
 
         ]]>
     </string>
-
 
     <string name="Dosage">
         <![CDATA[
@@ -233,6 +100,7 @@
 
         ]]>
     </string>
+
 
     <string name="Contraindications">
         <![CDATA[
@@ -283,7 +151,6 @@
         ]]>
     </string>
 
-
     <string name="Warnings">
         <![CDATA[
                 <h3>1. Warnings</h3>
@@ -325,8 +192,6 @@
 								</ul>
         ]]>
     </string>
-
-
     <string name="Pregnancy">
         <![CDATA[
 
@@ -344,6 +209,13 @@
         ]]>
     </string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    // Html static data
 
     <string name="Effects">
         <![CDATA[
@@ -450,7 +322,6 @@
 
         ]]>
     </string>
-
 
     <string name="Preclinical">
         <![CDATA[
@@ -734,9 +605,138 @@
         ]]>
     </string>
 
+
     <string name="services_url">http://heartgate.co/api_heartgate/</string>
 
+
     <string name="services_url_imgs">http://heartgate.co/api_heartgate/layout/images/</string>
+
+
+    <string-array name="speciality_array">
+        <item>Speciality:</item>
+        <item>Cardiologist</item>
+        <item>Internist</item>
+        <item>General Practitioner</item>
+        <item>other</item>
+    </string-array>
+
+
+    <string-array name="jobTitle_array">
+        <item>JobTitle:</item>
+        <item>Doctor</item>
+        <item>Professor/Assistant Professor</item>
+        <item>Lecture/Assistant Lecture</item>
+        <item>Specialist</item>
+        <item>Consultant</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="currentLiving_array">
+        <item>Current Living Place:</item>
+        <item>6th of October</item>
+        <item>Alexandria</item>
+        <item>Aswan</item>
+        <item>Asyut</item>
+        <item>Behira</item>
+        <item>Beni Suef</item>
+        <item>Cairo</item>
+        <item>Dakahlia</item>
+        <item>Damietta</item>
+        <item>Faiyum</item>
+        <item>Gharbia</item>
+        <item>Giza</item>
+        <item>Helwan</item>
+        <item>Ismailia</item>
+        <item>Kafr El-Sheikh</item>
+        <item>Luxor</item>
+        <item>Matruh</item>
+        <item>Minya</item>
+        <item>Monufia</item>
+        <item>New Valley</item>
+        <item>North Sinai</item>
+        <item>Port Said</item>
+        <item>Qalyubia</item>
+        <item>Qena</item>
+        <item>Sharqia</item>
+        <item>Sohag</item>
+        <item>South Sinai</item>
+        <item>Suez</item>
+    </string-array>
+
+
+    <string-array name="currentWork_array">
+        <item>Current Work Place:</item>
+        <item>6th of October</item>
+        <item>Alexandria</item>
+        <item>Aswan</item>
+        <item>Asyut</item>
+        <item>Behira</item>
+        <item>Beni Suef</item>
+        <item>Cairo</item>
+        <item>Dakahlia</item>
+        <item>Damietta</item>
+        <item>Faiyum</item>
+        <item>Gharbia</item>
+        <item>Giza</item>
+        <item>Helwan</item>
+        <item>Ismailia</item>
+        <item>Kafr El-Sheikh</item>
+        <item>Luxor</item>
+        <item>Matruh</item>
+        <item>Minya</item>
+        <item>Monufia</item>
+        <item>New Valley</item>
+        <item>North Sinai</item>
+        <item>Port Said</item>
+        <item>Qalyubia</item>
+        <item>Qena</item>
+        <item>Sharqia</item>
+        <item>Sohag</item>
+        <item>South Sinai</item>
+        <item>Suez</item>
+    </string-array>
+
+    <string-array name="previousWork_array">
+        <item>Previous Work Place:</item>
+        <item>6th of October</item>
+        <item>Alexandria</item>
+        <item>Aswan</item>
+        <item>Asyut</item>
+        <item>Behira</item>
+        <item>Beni Suef</item>
+        <item>Cairo</item>
+        <item>Dakahlia</item>
+        <item>Damietta</item>
+        <item>Faiyum</item>
+        <item>Gharbia</item>
+        <item>Giza</item>
+        <item>Helwan</item>
+        <item>Ismailia</item>
+        <item>Kafr El-Sheikh</item>
+        <item>Luxor</item>
+        <item>Matruh</item>
+        <item>Minya</item>
+        <item>Monufia</item>
+        <item>New Valley</item>
+        <item>North Sinai</item>
+        <item>Port Said</item>
+        <item>Qalyubia</item>
+        <item>Qena</item>
+        <item>Sharqia</item>
+        <item>Sohag</item>
+        <item>South Sinai</item>
+        <item>Suez</item>
+    </string-array>
+
+    <string-array name="yearsOfExp_array">
+        <item>Years Of Experience:</item>
+        <item>1-3</item>
+        <item>3-5</item>
+        <item>5-7</item>
+        <item>7-10</item>
+        <item>More than 10 years</item>
+    </string-array>
 
     <!--
 

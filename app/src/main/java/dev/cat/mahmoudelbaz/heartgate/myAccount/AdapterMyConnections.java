@@ -28,6 +28,7 @@ import dev.cat.mahmoudelbaz.heartgate.Login;
 import dev.cat.mahmoudelbaz.heartgate.R;
 import dev.cat.mahmoudelbaz.heartgate.chat.chatActivity;
 import dev.cat.mahmoudelbaz.heartgate.home.Home;
+import dev.cat.mahmoudelbaz.heartgate.myAccount.oldChat.oldChatActivity;
 
 import static android.content.ContentValues.TAG;
 
@@ -147,7 +148,7 @@ public class AdapterMyConnections extends BaseAdapter implements Filterable {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(context, "Please Wait", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(context, chatActivity.class);
+                    Intent i = new Intent(context, oldChatActivity.class);
                     i.putExtra("receiveId" , product.getId() );
                     i.putExtra("name" , product.getName() );
                     i.putExtra("imageUrl" , product.getImageUrl() );

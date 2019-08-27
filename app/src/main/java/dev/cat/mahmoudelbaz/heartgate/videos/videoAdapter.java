@@ -36,6 +36,7 @@ import butterknife.ButterKnife;
 import dev.cat.mahmoudelbaz.heartgate.R;
 import dev.cat.mahmoudelbaz.heartgate.myAccount.ModelMyConnections;
 
+import static com.google.android.gms.cast.framework.media.MediaUtils.getImageUri;
 import static dev.cat.mahmoudelbaz.heartgate.webServices.Services.MAIN_VIDEOS_URL;
 
 public class videoAdapter extends RecyclerView.Adapter<videoAdapter.MyViewHolder>  implements Filterable {
@@ -80,15 +81,15 @@ public class videoAdapter extends RecyclerView.Adapter<videoAdapter.MyViewHolder
                 .addRequestHandler(videoRequestHandler)
                 .build();
 
-   /*     try {
+  /*     try {
             picassoInstance
                     .load(getImageUri(context , retriveVideoFrameFromVideo( MAIN_VIDEOS_URL + cardioUpdatesResponseModels.get(position).getVideo_url())))
                     .into(holder.thumbnail);
 
         } catch (Throwable throwable) {
             throwable.printStackTrace();
-        }*/
-
+        }
+*/
 
         holder.layout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {

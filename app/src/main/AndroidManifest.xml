@@ -2,22 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dev.cat.mahmoudelbaz.heartgate">
 
-    <supports-screens
-        android:anyDensity="true"
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:resizeable="true"
-        android:smallScreens="true"
-        android:xlargeScreens="true" />
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-
     <application
         android:name=".HeartGate"
         android:allowBackup="true"
@@ -25,7 +9,8 @@
         android:label="@string/app_name"
         android:largeHeap="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".videos.VideoDetailsActivity"></activity>
+        <activity android:name=".myAccount.oldChat.oldChatActivity"></activity>
+        <activity android:name=".videos.VideoDetailsActivity" />
         <activity android:name=".videos.VideosListActivity" />
         <activity android:name="dev.cat.mahmoudelbaz.SplashActivity">
             <intent-filter>
@@ -59,7 +44,6 @@
         <activity android:name=".advisoryBoard.AddQuestion" />
         <activity android:name=".advisoryBoard.QuestionDetails" />
         <activity android:name=".advisoryBoard.Questions" />
-
         <activity android:name=".signUp.Disclaimer" />
         <activity android:name=".myAccount.NearByDrs" />
         <activity android:name=".myAccount.Favourites" />
@@ -68,17 +52,18 @@
         <activity android:name=".myAccount.MyProfile" />
         <activity android:name=".poll.Survey" />
         <activity android:name=".chat.chatActivity" />
-
         <activity android:name=".drugInteractions.DrugInteractions" />
         <activity android:name=".heartPress.CardioUpdates" />
         <activity android:name=".heartPress.OnlineLibrary" />
-        <activity android:name=".medicalStatistics.BMI" /><!--
+        <activity android:name=".medicalStatistics.BMI" />
+        <!--
         <activity android:name=".game.View.LoginActivity" />
         <activity android:name=".game.View.BuildingActivity" />
         <activity android:name=".game.View.HomeActivty" />
         <activity android:name=".game.View.pdfviewer" />
         <activity android:name=".game.View.RegisterScreen" />
-        <activity android:name=".game.View.SplachScreen" />-->
+        <activity android:name=".game.View.SplachScreen" />
+        -->
         <activity android:name=".medicalStatistics.CardioRiskFactor" />
         <activity
             android:name=".myAccount.ConnectionsTabs"
@@ -89,18 +74,32 @@
              Note that the API key is linked to the encryption key used to sign the APK.
              You need a different API key for each encryption key, including the release key that is used to
              sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
+        <activity android:name=".MapsActivity" />
+
+        <activity android:name=".pharamcy.Pharamcy" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".MapsActivity" />
-        <activity android:name=".pharamcy.Pharamcy" />
-
-        <service android:name=".videos.MediaPlayerService"></service>
-
-
+        <service android:name=".videos.MediaPlayerService" />
     </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest>
