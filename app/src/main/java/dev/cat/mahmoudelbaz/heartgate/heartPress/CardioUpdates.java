@@ -49,6 +49,7 @@ public class CardioUpdates extends AppCompatActivity {
         shared = getSharedPreferences("id", Context.MODE_PRIVATE);
 
         userID = shared.getString("id", "0");
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         nearBysearchView = (EditText) findViewById(R.id.nearBysearch_view);
 
@@ -84,7 +85,7 @@ public class CardioUpdates extends AppCompatActivity {
             @Override
             public void onResponse(Call< List<CardioUpdatesResponseModel> > call, Response< List<CardioUpdatesResponseModel> > response) {
                 if (!response.isSuccessful()) {
-                    assert response.errorBody() != null;
+           //         assert response.errorBody() != null;
                     Toast.makeText(CardioUpdates.this, response.errorBody().toString() ,  Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
                 } else {
@@ -103,7 +104,7 @@ public class CardioUpdates extends AppCompatActivity {
             @Override
             public void onFailure(Call< List<CardioUpdatesResponseModel> > call, Throwable t) {
                 Toast.makeText(CardioUpdates.this, "failure , check your connection", Toast.LENGTH_LONG).show();
-                Log.e("login", "onFailure: ", t);
+                Log.e("CardioUpdates", "onFailure: ", t);
                 progressBar.setVisibility(View.GONE);
             }
         });

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Sign up</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        
+    </head>
+    <style>
+		.col-xs-3{
+			padding-right: 0;
+			padding-left: 9px
+		}
+		h1{
+			font-size: 250%
+		}
+		h3{
+			color: yellow;
+			text-shadow: none
+		}
+		label span{
+			color: red
+		}
+		#disclaimers .container p{
+			font-size: 11px;
+		}
+		#disclaimers .container h1, h2, h3, h4, h5, h6{
+			font-size: 100%;
+			font-weight: bold;
+			color: darkblue
+		}
+		#disclaimers .container ul li{
+			font-size: 11px;
+		}
+		.ui-checkbox, .ui-radio{
+			display: inline-block;
+			margin: 0;
+		}
+		.ui-radio .ui-btn.ui-radio-on:after {
+			background-image: none;
+			background-color: #fff;
+			width: 17px;
+			height: 17px;
+			border-width: 5px;
+			border-style: solid;
+		}
+		.ui-btn-icon-left{
+			padding-left: 1.5em
+		}
+		.ui-btn.ui-checkbox-off:after, .ui-btn.ui-checkbox-on:after, .ui-btn.ui-radio-off:after, .ui-btn.ui-radio-on:after {
+			display: block;
+			width: 18px;
+			height: 18px;
+			margin: -9px 2px 0 -6px;
+		}
+        .ui-select .ui-btn>span:not(.ui-li-count) {
+            font-size: 12px;
+            line-height: 1.5em;
+            font-weight: 100;
+        }
+		.containerAlert{
+			position: fixed;
+			margin: 0;
+			z-index: 99999;
+			background-color: rgba(0, 0, 0, .6);
+			width: 100%;
+			height: 100%;
+		}
+        .ui-input-text, .ui-select{
+            margin: 0 0 5px
+        }
+        .ui-mobile label {
+            display: block;
+            margin: 0 0 5px;
+            color: #fffb00;
+            text-shadow: none;
+        }
+        .ui-input-text input::placeholder{
+            font-size: 11px
+        }
+		.alert {
+			padding: 20px;
+			background-color: #f44336; /* Red */
+			color: white;
+			margin: auto;
+			position: absolute;
+			left: 10%;
+			right: 10%;
+			text-shadow: none;
+			top: 45%;
+		}
+
+		/* The close button */
+		.closebtn {
+			margin-left: 15px;
+			color: white;
+			font-weight: bold;
+			float: right;
+			font-size: 22px;
+			line-height: 20px;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		/* When moving the mouse over the close button */
+		.closebtn:hover {
+			color: black;
+		}
+        h6.lead{
+            font-size: 12px
+        }
+        label{
+            font-size: 14px !important
+        }
+	</style>
+    <body>
+		<div data-role="page" class="master" id="pageRigster" style="background: url(img/HG_inside_portrait.jpg) top/cover no-repeat; font-family: Verdana; overflow: scroll; height:100%;">
+			<div id="disclaimers" style="background: #fff; position: fixed; top: 0;left: 0; height: 100%; display: block; z-index: 99999;">
+				<h3 class="text-center" style="color:darkblue">Disclaimers/Consent</h3>
+				<div class="container" style="height: 75%; width: 85%; overflow: scroll; -webkit-overflow-scrolling: touch; box-shadow: 0px 0px 5px 0px inset; padding: 15px; border-radius: 3px 0">
+					<p>This app is intended for informational, educational and research purposes only. It is not, and is not intended, for use in the diagnosis of disease or other conditions, or in the cure, mitigation, treatment, or prevention of disease, in man or other animals. Health care providers should exercise their own independent clinical judgment when using the app in conjunction with patient care.</p>
+
+					<p>You expressly understand and agree that your use of the Content provided by the app is at your sole responsibility of risk. The Content is provided on and “AS IS” and “AS AVAILABLE” basis. MERCK and its affiliates expressly disclaims overrides and excludes all warranties and liabilities of any kind that may arise out of or in connection with the use of this app, whether express or implied, arising by law, custom, prior oral or written (including, but not limited to any warranty fitness for a particular purpose).</p>
+
+					<p>MERCK makes NO warranty that (a) the Content will meet your requirements, (b) the app will be uninterrupted, timely, secure, or error-free, (c) the results that may be obtained from the use of the Content will be accurate or reliable, (e) any errors in the software will be corrected.</p>
+
+					<h4>Physician consent</h4>
+					<p>You hereby consent and irrevocably agree to use the application solely for your cardiovascular patients, and are responsible for reporting of any adverse events as communicated to you by the patient(s).</p>
+					
+					<h2>Data Privacy Statement</h2>
+					<h4>Introduction</h4>
+					<p>Thank you for your interest in the heartgate-App/n of the (Merck Ltd. - Egypt | Building 4 Section 1150, End of Abdel Hamid Badawi St. Sheraton Buildings District | Cairo | Egypt), referred to briefly as “Merck” in this statement. The issue of data protection and confidentiality is a topic we take very seriously and we follow the applicable national and European data protection regulations. With this statement on data protection measures, we therefore want to provide you with information on the types of data that we may collect and how we use that data.</p>
+
+					<h4>Merck-App</h4>
+					<p>The (HeartGate)-App is an application which is provided by the (Merck Ltd. - Egypt | Building 4 Section 1150, End of Abdel Hamid Badawi St. Sheraton Buildings District | Cairo | Egypt). The installation of the Merck App is provided by the technical operator (Google Play Store) under their terms and conditions.</p>
+
+					<p>
+						<i style="color:black">If you contact us, we collect your current GPS location in order to provide you rapidly with information about your direct surroundings. Data related to your location will only be used for processing your request. Transfer of your location data is performed with encrypted connection. On completion of your request, your location data will be anonymized and used for improvement of our services.</i>
+					</p>
+
+					<p>
+						<strong>Will my data be stored?</strong>
+					</p>
+
+					<p>Usage of the Merck App is possible without providing personal information. Data that we store and analyze will only be used for statistical purpose, e.g. for improvement of our service. Data that we store on our servers are the name of your internet provider, the website from which you visit us, the Merck websites that you visited, your IP-address (shortened), date and duration  your visit.
+					</p>
+
+					<p>
+						<strong>Are personal data collected and processed?</strong>
+					</p>
+
+					<p>We only collect and process personal data if you make use of specific services and we therefore require your data or if you have voluntarily given us your express consent. You may do so, for instance, as part of a registration procedure, by completing a form or by sending an e-mail, ordering products or services, sending us a query or requesting materials. Unless we are subject to other legal commitments, we only use your personal data for the purposes for which you have given your consent.</p>
+
+					<p>
+						<strong>For what purpose does Merck collect data?</strong>
+					</p>
+					<ul>
+						<li>Verification of the registered personnel that they are real HCPs ( Health Care Professionals).</li>
+						<li>Evaluation &amp; segmentation of usage of the delivered educational content by the platform.</li>
+					</ul>
+
+					<p>
+						<strong>What cookies are applied?</strong>
+					</p>
+
+					<p>We apply cookies on our App. If you are not interested in the advantages of our cookies, you can read in the help function of your browser how to configure your browser to prevent cookies or delete existing cookies. Also, you will learn there how to block your browser for all new cookies and which configuration steps are required to receive a notification about new cookies.<br><br>
+					Please see the following table for cookies that we currently use on our website:</p>
+
+					<p>
+						<strong>How long will my data be stored?</strong>
+					</p>
+					<p>We store data as required by legal obligation or for the period of time that is required to provide a service you have requested or as agreed in applicable consent.</p>
+					
+					<p>
+						<strong>Do I have the right for information and correction with regard to data stored about me?</strong>
+					</p>
+
+					<p>You can always and without compensation request information about the scope, the origin and the recipients of your personal data and the purpose of the data storage. Also you are entitled to ask for correction of any of your personal data that we have stored.</p>
+
+					<p>
+						<strong>Can I withdraw my consent to the use of my data?</strong>
+					</p>
+
+					<p>You are entitled to withdraw your consent to the use of your data at any time, affecting all future use. All you need to do is to send an e-mail to: [support@heartgate] or message to the following address:</p>
+
+					<footer>
+						<p>Merck Ltd. - Egypt | Building 4 Section 1150, End of Abdel Hamid Badawi St. Sheraton Buildings District | Cairo | Egypt</p>
+					</footer>
+				</div>
+
+				<button class="btn btn-success" id="agreeBtn" style="background-color: green; color: aliceblue; text-shadow: none; border-color: none; width: 30%; float: left; left: 10%; font-size: 13px">agree</button>
+				<button class="btn btn-danger" id="disagreeBtn" style="background-color: red; color: aliceblue; text-shadow: none; border-color: none; width: 30%; float: right; right: 10%; font-size: 13px">disagree</button>
+
+			</div>
+			
+			<div data-role="header" data-position="fixed" data-theme="b" style="background:#fdcc29; color: darkred;">
+				<a data-rel="back" data-direction="reverse" class="backBtnNavTop" style="height:32px; background: #fdcc29; color: darkred; border: 1px solid #900; text-shadow: none; font-size: 100%; line-height: .7;">Back</a>
+				<h1>Sign up</h1>
+				<img src="img/icon_M_top_right_withoutBG.png" width="50" style="top:10px; right:10px; position:absolute;" />
+			</div>
+			
+			<div role="main" class="ui-content" style="margin:7px;"> <!-- Start Contents from here -->
+				
+				<div class="group-title">
+					<img src="img/icon_HG_Name.png" alt="heart gate" class="img-responsive" />
+				</div>
+				
+				<form class="form-horizontal" id="regForm">
+					<h6 class="lead">Please fill in all the below requirements:</h6>
+					<div class="form-group nopadding">
+						<label for="fullName" class="col-xs-3">Full Name:<span>&#42;</span></label>
+						<div class="col-xs-3">
+							<input type="text" name="firstname" id="firstname" placeholder="First Name" class="form-control" autofocus required>
+						</div>
+						<div class="col-xs-3">
+							<input type="text" name="midname" id="midname" placeholder="Middle Name" class="form-control" autofocus required>
+						</div>
+						<div class="col-xs-3">
+							<input type="text" name="lastname" id="lastname" placeholder="Last Name" class="form-control" autofocus required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="username" class="col-xs-4">Username:<span>&#42;</span></label>
+						<div class="col-xs-8">
+							<input type="text" name="username" id="username" placeholder="User Name" class="form-control" required autocomplete="off">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-xs-4">Password:<span>&#42;</span></label>
+						<div class="col-xs-8">
+							<input type="password" name="password" id="password" placeholder="Password" class="form-control" required autocomplete="off">
+							<input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="form-control" required autocomplete="off">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="email" class="col-xs-4">E-mail:<span>&#42;</span></label>
+						<div class="col-xs-8">
+							<input type="email" name="email" id="email" placeholder="Email" class="form-control" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="phoneNumber" class="col-xs-4">Phone Number:<span>&#42;</span></label>
+						<div class="col-xs-8">
+							<input type="text" name="mobile_number" id="mobile_number" placeholder="Your Phone Number" class="form-control" autofocus required>
+						</div>
+					</div>
+
+<!--
+					<div class="form-group">
+						<label for="birthDate" class="col-xs-4">Date of Birth:</label>
+						<div class="col-xs-8">
+							<input type="date" name="birthdate" id="birthdate" class="form-control">
+						</div>
+					</div>
+-->
+					<div class="form-group">
+						<label class="col-xs-4">Gender:<span>&#42;</span></label>
+						<div class="col-xs-8">
+							<label><input class="col-xs-5" type="radio" name="fk_gender_id" id="fk_gender_id1" value="1" required>Male</label>
+							<label><input class="col-xs-5" type="radio" name="fk_gender_id" id="fk_gender_id2" value="2" required>Female</label>
+						</div>
+						
+					</div> <!-- /.form-group -->
+
+						<div class="form-group">
+							<label for="speciality" class="col-xs-4">Speciality:<span>&#42;</span></label>
+							<div class="col-xs-8">
+								<select name="fk_speciality_id" id="fk_speciality_id" class="form-control" required>
+									<option value="0">-Speciality-</option>
+								</select>
+							</div>
+						</div> <!-- /.form-group -->
+
+<!--
+						<div class="form-group">
+							<label for="job-title" class="col-xs-4">Job Title:<span>&#42;</span></label>
+								<div class="col-xs-8">
+									<select name="fk_job_id" id="fk_job_id" class="form-control" required>
+										<option value="0">-Job Title-</option>
+									</select>
+								</div>
+						</div>  /.form-group 
+-->
+
+<!--
+						<div class="form-group">
+							<label for="livingPlace" class="col-xs-4">Current Living Place:<span>&#42;</span></label>
+							<div class="col-xs-8">
+								<select name="fk_current_living_place" id="fk_current_living_place" class="form-control" required>
+										<option value="0">-Living Place-</option>
+								</select>
+							</div>
+						</div>
+-->
+
+						<div class="form-group">
+							<label for="workingPlace" class="col-xs-4">Current Work Place:<span>&#42;</span></label>
+							<div class="col-xs-8">
+								<select name="fk_current_work_place" id="fk_current_work_place" class="form-control" required>
+										<option value="0">-Work Place-</option>
+								</select>
+							</div>
+						</div>
+
+<!--
+						<div class="form-group">
+							<label for="prevWorkPlace" class="col-xs-4">Previous Work Place:</label>
+							<div class="col-xs-8">
+								<select name="fk_previous_work_place" id="fk_previous_work_place" class="form-control">
+										<option value="0">-Previous Work Place-</option>
+								</select>
+							</div>
+						</div>
+-->
+
+<!--
+					<div class="form-group">
+						<label for="work exp" class="col-xs-4">Years Of Work Experience:<span>&#42;</span></label>
+						<div class="col-xs-8">
+							<select name="fk_year_of_experience" id="fk_year_of_experience" class="form-control" required>
+								<option value="0">-Work Experience-</option>
+							</select>
+						</div>
+					</div> 
+					<div class="form-group">
+						<div class="col-xs-7 col-xs-offset-3">
+						</div>
+					</div> 
+
+                    <div class="form-group">
+                        <label for="interests" class="col-xs-3 lead">Interests:</label>
+                        <div class="col-xs-9">
+                            <textarea class="form-control" name="interests" id="interests"></textarea>
+                        </div>
+                    </div>
+-->
+
+					<div class="form-group">
+						<div class="col-xs-12">
+							<button type="submit" class="btn btn-success btn-block">Register</button>
+						</div>
+					</div>
+				</form> <!-- /form -->
+				
+			</div> <!-- End contents -->
+			
+			
+		</div><!-- end page 1 -->
+    
+		<!-- jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script>
+			$(function(){
+				$('#agreeBtn').on('click', function(){
+					$('#disclaimers').slideToggle(500);
+				});
+				$('#disagreeBtn').on('click', function(){
+					location.href = 'index.html';
+				});
+			});
+		</script>
+        
+        <script src="js/manageUsers.js"></script>
+        
+		
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Heart Gate - Connections</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/TweenMax.min.js"></script>
+        
+    </head>
+    
+    <body>
+		
+		<div data-role="page" class="master" id="pageConnections" data-enhance="false">
+			<div data-role="header" data-position="fixed" data-theme="b" style="background:#fdcc29; color: darkred;">
+				<a data-rel="back" data-direction="reverse" class="backBtnNavTop" id="backBtn">Back</a>
+				<h1>Connections</h1>
+				<img src="img/icon_M_top_right_withoutBG.png" width="50" style="top:10px; right:10px; position:absolute;" />
+			</div>
+			
+			<div role="main" class="ui-content"> <!-- Start Contents from here -->
+		
+				<div id="myConnections-" class="tap-pane fade in active containerMyConn">
+					<ul class="nav nav-tabs">
+					  	<li id="getMyConnections" class="active"><a data-toggle="tab" href="#myConnected-page">My<br>Connections</a></li>
+					  	<li id="getReceivedConnections"><a data-toggle="tab" href="#receivedConn-page">Received<br>Connec.</a></li>
+					  	<li id="getSentConnections"><a data-toggle="tab" href="#sentConn-page">Sent<br>Connec.</a></li>
+						<li id="getAllConnections"><a data-toggle="tab" href="#findConnections-page">Find<br>Connections</a></li>
+					</ul>
+					<div class="tab-content pageConnections">
+						
+						<div id="myConnected-page" class="tab-pane fade in active">
+							<input type="text" class="myInput" placeholder="Search for names..." id="inputc">
+                            <ul id="myULc">
+                                
+                            </ul>
+						</div>
+						
+						<div id="receivedConn-page" class="tab-pane fade">
+							<input type="text" class="myInput" placeholder="Search for names..." id="inputr">
+                            <ul id="myULr">
+                            </ul>
+						</div>
+						
+						<div id="sentConn-page" class="tab-pane fade">
+							<input type="text" class="myInput" placeholder="Search for names..." id="inputs">
+                            <ul id="myULs">
+                            </ul>
+						</div>
+						
+						<div id="findConnections-page" class="tap-pane fade">
+							<input type="text" class="myInput" placeholder="Search for names..." id="inputfd">
+                            <ul id="myULfd" style="height: 340px">
+                            </ul>
+						</div>
+						
+					</div>
+				</div>
+                
+                
+                
+                <!-- Wrapper Messages from here -->
+                
+                <div class="wrapperMsg" id="wrapperMsg">
+                    <div class="headerMsg" id="header">
+                        <i class="fa fa-close fa-2x"></i>
+                    </div>
+                    
+                    <div class="ChatAreaMsg" id="ChatAreaMsg">
+                        LOADING CHATLOG...
+                    </div>
+                    
+                    <div class="footerMsg" id="footerMsg">
+                        <form id="sendMsgForm" name="sendMsgForm">
+                            <input type="text" name="sendTextBox" id="sendTextBox" class="sendTextBox" data-role="none" placeholder="Type message...">
+                            <button type="button" name="sendBtnText" id="sendBtnText" class="sendTextBtn" data-role="none">Send</button>
+                        </form>
+                    </div>
+                </div>
+                
+                
+                
+                
+				
+        	</div> <!-- End contents -->
+			
+			<div data-role="footer" class="footer navBtns" data-position="fixed">
+				<div data-role="navbar" data-grid="d" style="width:85%;">
+					<ul>
+						<li id="btnOfHome"><a href="home.html" data-transition="slide" data-direction="reverse" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_home.png" width="100%" /></a></li>
+						<li id="btnOfConnections"><a href="connections.html" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_connections.png" width="100%" /></a></li>
+						<li id="btnOfPrice"><a href="concor_price.html" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_price.png" width="100%" /></a></li>
+						<li id="btnOfNearby"><a href="#" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_nearby.png" width="100%" /></a></li>
+						<li id="btnOfDDI"><a href="ddi.html" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_ddi_nav.png" width="100%" /></a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<div style="width: 15%; position: fixed; right: 0; bottom: 0">
+					<img src="img/icon_bottom_right.png" style="width:17%; bottom:0; position:fixed">
+				</div>
+			</div><!-- end footer -->
+		</div><!-- end page 1 -->
+
+        
+    	<!-- jQuery -->
+		<script>
+			$('#pageConnections').on('pagecreate', function(event, ui) {
+				console.log('pageConnections page loaded');
+				
+			});
+
+		</script>
+
+
+		<script>
+			$('#btnOfNearby').on('click', function(){
+				AndroidFunction.nearBy();
+            });
+        </script>
+        
+        <script src="js/manageUsers.js"></script>
+        
+    </body>
+</html>

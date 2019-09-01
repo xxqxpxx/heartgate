@@ -152,6 +152,25 @@
         android:dividerHeight="5dp" >
 
         <TextView
+            android:text="result:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_marginTop="25dp"
+            android:textSize="20sp"/>
+
+        <TextView
             android:text="weight:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -199,15 +218,6 @@
             android:text="calculate BMI"
             />
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:textColor="@color/white"
-            android:layout_marginTop="25dp"
-            android:textSize="20sp"/>
 
     </LinearLayout>
 

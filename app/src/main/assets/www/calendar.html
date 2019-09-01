@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset='utf-8' />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Events</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/fullcalendar.min.css">
+        <link rel="stylesheet" href="css/fullcalendar.print.min.css" media='print'>
+        
+        <script src="js/moment.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/fullcalendar.min.js"></script>
+        
+        <script>
+            $(function() {
+                
+                function getCookie(name) {
+                    var nameEQ = name + "=",
+                        ca = document.cookie.split(';'),
+                        i,
+                        c;
+
+                    for (i = 0; i < ca.length; i += 1) {
+                        c = ca[i];
+                        while (c.charAt(0) === ' ') {c = c.substring(1, c.length); }
+                        if (c.indexOf(nameEQ) === 0) {
+                            return c.substring(nameEQ.length, c.length);
+                        }
+                    }
+                    return null;
+                }
+                
+                var userid = getCookie('userid');
+
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,agendaWeek,agendaDay,listMonth'
+                    },
+                    defaultDate: '2017-09-17',
+                    navLinks: true, // can click day/week names to navigate views
+                    businessHours: true, // display business hours
+                    editable: true,
+                    events: {
+                        url: 'http://hg.api.digitalcatsite.com/calendar/' + userid,
+                        error: function() {
+                            $('#script-warning').append();
+                        }
+                    },
+                    loading: function(bool) {
+                        $('#loading').toggle(bool);
+                    }
+                }); // end calendar events
+                
+                $(document).on('touchend', '#backBtn', function () {
+                    window.history.back();
+                });
+                
+//                $('.fc-listMonth-button, .fc-next-button, .fc-prev-button').on("click", function () {
+//                    $('body').find('.fc-list-item-title').append('<tr class="fc-list-item"><td class=".fc-list-item-btn"><button>Attend</button></td></tr>');
+//                });
+                
+            }); // end document ready
+            
+            
+
+        </script>
+        <style>
+            .master{
+                background: url(img/HG_inside_portrait.jpg) top/100% no-repeat;
+                font-family: Verdana;
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0
+            }
+            #pageCalendar .header{
+                background: #fdcc29; 
+                color: darkred; 
+                position: fixed; 
+                width: 100%; 
+                height: 8%;
+            }
+            #pageCalendar .header h1{
+                font-size: 1.3em;
+                text-align: center;
+                position: absolute;
+                margin: 15px auto;
+                width: 100%;
+            }
+            .backBtnNavTop{
+                background-color: rgb(249, 112, 28);
+                border-color: #fff;
+                color: #fff !important;
+                text-shadow: none;
+                font-size: 100% !important;
+                border-radius: 0 5px;
+                margin: 5px 7px;
+                padding: 9px 18px;
+                font-size: 0.9em !important;
+                position: absolute;
+                z-index: 999999999
+            }
+            #calendar {
+                max-width: 100%;
+                margin: 14% 5px 0;
+                padding: 5px;
+                background-color: #fff;
+                border-radius: 5px;
+/*                box-shadow: 0 0 40px 1px darkblue*/
+                min-height: 420px;
+            }
+            .footerCalendar{
+                position: fixed;
+                bottom: 0;
+                left: 0
+            }
+            .footerCalendar ul{
+                display: inline-flex;
+                width: 87%;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            .fc-widget-content div{
+                height: 100% !important;
+            }
+            .fc-basic-view .fc-body .fc-row{
+                min-height: 3.5em
+            }
+            .fc-toolbar .fc-left{
+                font-size: .9em
+            }
+            .calendar-btns{
+                margin: 9px 5px 9px 0 !important;
+                font-size: 13px !important;
+                padding: 5px !important
+            }
+
+        </style>
+    </head>
+    
+    <body class="master">
+		
+		<div id="pageCalendar">
+            
+			<div class="header">
+				<a class="backBtnNavTop" id="backBtn">Back</a>
+				<h1>Events</h1>
+				<img src="img/icon_M_top_right_withoutBG.png" width="50" style="top:10px; right:10px; position:fixed;" />
+			</div>
+            
+            <div class="clearfix"></div>
+                
+                
+                <!-- Start Calendar from here -->
+
+                <div id='calendar'></div>
+
+                <!-- End Calendar here -->                
+				
+			
+			
+			<div class="footerCalendar">
+                <ul>
+                    <li id="btnOfHome" style="border: none !important">
+                        <a href="home.html" style="background:rgba(0,0,0,0) !important; padding:0; border-color: transparent;">
+                            <img src="img/icon_home.png" width="100%" />
+                        </a>
+                    </li>
+                    <li id="btnOfConnections">
+                        <a href="connections.html" style="background:rgba(0,0,0,0) !important; padding:0; border-color: transparent;">
+                            <img src="img/icon_connections.png" width="100%" />
+                        </a>
+                    </li>
+                    <li id="btnOfPrice">
+                        <a href="concor_price.html" style="background:rgba(0,0,0,0) !important; padding:0; border-color: transparent;">
+                            <img src="img/icon_price.png" width="100%" />
+                        </a>
+                    </li>
+                    <li id="btnOfNearby">
+                        <a href="#" style="background:rgba(0,0,0,0) !important; padding:0; border-color: transparent;">
+                            <img src="img/icon_nearby.png" width="100%" />
+                        </a>
+                    </li>
+                    <li id="btnOfDDI">
+                        <a href="ddi.html" style="background:rgba(0,0,0,0) !important; padding:0; border-color: transparent;">
+                            <img src="img/icon_ddi_nav.png" width="100%" />
+                        </a>
+                    </li>
+                </ul>
+				<div style="width: 15%; position: fixed; right: 0; bottom: 0">
+					<img src="img/icon_bottom_right.png" style="width:17%; bottom:0; position:fixed">
+				</div>
+			</div><!-- end footer -->
+
+        </div><!-- end page -->
+
+
+        <script>
+            $('#btnOfNearby').on('click', function(){
+                AndroidFunction.nearBy();
+            });
+        </script>
+		
+			
+		<script src="js/manageUsers.js"></script>
+        		
+    </body>
+</html>

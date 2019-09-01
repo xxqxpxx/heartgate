@@ -18,7 +18,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="70dp"
         android:scaleType="centerCrop"
         />
 
@@ -74,19 +74,6 @@
         />
 
 
-    <TextView
-        android:id="@+id/txt_call_support"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/bottomLayout"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="30dp"
-        android:text="Call Support"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="30dp" />
 
 
     <LinearLayout
@@ -184,6 +171,19 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
+
+
+    <TextView
+        android:id="@+id/txt_call_support"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/bottomLayout"
+        android:text="Call Support"
+        android:background="@drawable/rounded_rectangle_yellowish"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"  />
 
 
 </RelativeLayout>

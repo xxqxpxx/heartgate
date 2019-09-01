@@ -503,9 +503,9 @@ public class Home extends AppCompatActivity {
         drug.add(new Child_item("Drug Interactions", R.drawable.drugbg));
 
 
-        List<Child_item> pull = new ArrayList<Child_item>();
-        pull.add(new Child_item("Public Survey", R.drawable.pullbg));
-        pull.add(new Child_item("Private Survey", R.drawable.pullbg));
+        List<Child_item> poll = new ArrayList<>();
+        poll.add(new Child_item("Public Survey", R.drawable.pullbg));
+        poll.add(new Child_item("Private Survey", R.drawable.pullbg));
 
         List<Child_item> Pharmacy = new ArrayList<Child_item>();
         Pharmacy.add(new Child_item("Pharmacy", R.drawable.drugbg));
@@ -522,7 +522,7 @@ public class Home extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(3), medicalStatics);
         listDataChild.put(listDataHeader.get(4), advisory);
         listDataChild.put(listDataHeader.get(5), drug);
-        listDataChild.put(listDataHeader.get(6), pull);
+        listDataChild.put(listDataHeader.get(6), poll);
         listDataChild.put(listDataHeader.get(7), Pharmacy);
         listDataChild.put(listDataHeader.get(8), video);
 

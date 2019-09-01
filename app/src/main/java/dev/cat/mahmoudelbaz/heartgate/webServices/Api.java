@@ -9,6 +9,7 @@ import dev.cat.mahmoudelbaz.heartgate.heartPress.CardioUpdatesResponseModel;
 import dev.cat.mahmoudelbaz.heartgate.heartPress.onlineLibraryResponseModel;
 import dev.cat.mahmoudelbaz.heartgate.advisoryBoard.Questions_item;
 import dev.cat.mahmoudelbaz.heartgate.myAccount.oldChat.AllMessagesResponse;
+import dev.cat.mahmoudelbaz.heartgate.poll.SurveryResponseModel;
 import dev.cat.mahmoudelbaz.heartgate.videos.VideoResponseModel;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -43,6 +44,8 @@ public interface Api {
     @GET("videos/all")
     Call<List<VideoResponseModel>> getAllVideos();
 
+    @GET("survey/all/{userid}")
+    Call<List<SurveryResponseModel>  > getSurvey(@Path(value = "userid", encoded = true) String id);
 
     @POST("users/update_imageprofile_ios/{id}")
     Call<Object> changeImage(@Path(value = "id", encoded = true ) String id, @Body Map<String, String> map );

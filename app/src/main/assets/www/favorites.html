@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Heart Gate - Favorites</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    
+    <body>
+		<div data-role="page" class="master" id="pageFavvorites">
+			<div data-role="header" data-position="fixed" data-theme="b" style="background:#fdcc29; color: darkred;">
+				<a data-rel="back" data-direction="reverse" style="color: darkred;" id="backBtn">Back</a>
+				<h1>Favorites</h1>
+				<img src="img/icon_M_top_right_withoutBG.png" width="50" style="top:10px; right:10px; position:fixed;" />
+			</div>
+			
+			<div role="main" class="ui-content"> <!-- Start Contents from here -->
+				
+				<div class="well">
+					<div class="row">
+						<div class="secondary-title">
+							<h4 class="article-head">Article Title #1</h4>
+							<p class="article-info">Occaecat te esse cupidatat. Anim eiusmod eu cernantur, an magna concursionibus. 
+								Quamquam varias cillum officia summis ne excepteur iis velit doctrina. Nostrud 
+								nulla summis ab malis, sunt distinguantur iudicem varias officia. <a>Continue Reading..</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="well">
+					<div class="row">
+						<div class="secondary-title">
+							<h4>Article Title #2</h4>
+							<p class="article-info">Occaecat te esse cupidatat. Anim eiusmod eu cernantur, an magna concursionibus. 
+								Quamquam varias cillum officia summis ne excepteur iis velit doctrina. Nostrud 
+								nulla summis ab malis, sunt distinguantur iudicem varias officia. <a>Continue Reading..</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				
+<!--
+				<img src="img/icon_concor_bottom_left.png" width="125" style="left:0; bottom:0px; position:fixed; opacity:.3">
+				<img src="img/icon_MERCK_bottom_right.png" width="125" style="right:0; bottom:0px; position:fixed; opacity:.3">
+-->
+				
+			</div> <!-- End contents -->
+			
+			
+			<div data-role="footer" class="footer navBtns" data-position="fixed">
+				<div data-role="navbar" data-grid="d" style="width:85%;">
+					<ul>
+						<li id="btnOfHome"><a href="home.html" data-transition="slide" data-direction="reverse" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_home.png" width="100%" /></a></li>
+						<li id="btnOfConnections"><a href="connections.html" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_connections.png" width="100%" /></a></li>
+						<li id="btnOfPrice"><a href="concor_price.html" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_price.png" width="100%" /></a></li>
+						<li id="btnOfNearby"><a href="#" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_nearby.png" width="100%" /></a></li>
+						<li id="btnOfDDI"><a href="ddi.html" data-transition="slide" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_ddi_nav.png" width="100%" /></a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<div style="width: 15%; position: fixed; right: 0; bottom: 0">
+					<img src="img/icon_bottom_right.png" style="width:17%; bottom:0; position:fixed">
+				</div>
+			</div><!-- end footer -->
+		</div><!-- end page 1 -->
+
+        
+    
+		<!-- jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/manageUsers.js"></script>
+		
+		<script>
+			$('#pageFavvorites').on('pagecreate', function(event, ui){
+				console.log('pageFavvorites page loaded');
+
+			});
+
+		</script>
+
+
+		<script>
+			$('#btnOfNearby').on('click', function(){
+				AndroidFunction.nearBy();
+            });
+        </script>
+    </body>
+</html>

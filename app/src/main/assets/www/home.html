@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Heart Gate - Home</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    <body>
+		<div data-role="page" class="master" id="pageHome" data-enhance="false">
+			
+			<div data-role="header">
+				<img src="img/icon_M_top_right.png" width="150" style="top:0; right:0; position:fixed;" />
+				<img src="img/icon_top_left.png" width="300" id="headerPic" />
+			</div>
+			<div role="main" class="ui-content" style="padding: 0">
+				
+				<div class="panel panel-default profile-name">
+					<div class="panel-body">
+						<div class="row">
+							<div class="thumbnail profile-pic">
+								<img src="img/loader.gif" alt="doctor-image" class="img-responsive" width="75" id="picOnHomePage">
+							</div>
+							
+						</div>
+						<div class="profile-info">
+							<p id="fullNameOnHomePage" style="text-align:center"></p>
+							<p id="emailOnHomePage" class="mail" style="text-align:center"></p>
+							<p id="logoutProfileHome" class="logout" style="text-align:center"><a id="userLogout">Log out</a></p>
+						</div>
+					</div>
+				</div>
+				
+				<div data-role="collapsibleset" class="navTitles">
+					
+					<div data-role="collapsible" data-theme="b" data-content-theme="a">
+                        <h4 class="myAccountNavIcon">My Account</h4>
+						<ul data-role="listview" class="myAccountIndexFormat">
+							<li id="myProfileLi"><a href="my_profile.html">My Profile</a></li>
+							<li id="nearbyLi"><a href="#">Nearby Drs</a></li>
+							<li id="connectionsLi" style="background-color: #8DFC9D; border-color: #046608;"><a href="connections.html">Connections</a></li>
+							<li id="favLi"><a href="favorites.html">Favorites</a></li>
+							<li id="calLi"><a href="calendar.html">Calendar</a></li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-theme="b" data-content-theme="a">
+						<h4 class="concorNavIcon">Concor</h4>
+						<ul data-role="listview" class="concorIndexFormat">
+							<li><a href="concor.html">Concor</a></li>
+							<li><a href="concor_plus.html">Concor Plus</a></li>
+                            <li><a href="concor_price.html">Price</a></li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-theme="b" data-content-theme="a">
+						<h4 class="heartpressNavIcon">Heartpress</h4>
+						<ul data-role="listview" class="heartpressIndexFormat">
+							<li><a href="cardio_updates.html" id="cardioIndexTitle">Cardiovascular Updates</a></li>
+							<li><a href="online_lib.html">Online Library</a></li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-theme="b" data-content-theme="a">
+						<h4 class="statisticsNavIcon">Medical Statistics</h4>
+						<ul data-role="listview" class="cardioRiskIndexFormat">
+							<li><a href="bmi.html">BMI</a></li>
+							<li><a href="cardio_risk.html">Cardiovascular Risk Factor</a></li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-theme="b" data-content-theme="a">
+						<h4 class="advisoryNavIcon">Advisory Board</h4>
+						<ul data-role="listview" class="advisoryIndexFormat">
+							<li><a href="ask_experts.html">Ask Experts</a></li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-theme="b" data-content-theme="a">
+						<h4 class="ddiNavIcon">Drug Interactions</h4>
+						<ul data-role="listview" class="drugIndexFormat">
+							<li><a href="ddi.html">Drug Interactions</a></li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-theme="b" data-content-theme="a">
+						<h4 class="surveyNavIcon">Poll</h4>
+						<ul data-role="listview" class="surveyIndexFormat">
+							<li id="surveyNavIconPub" style="background-color: #88e9fc;"><a href="survey_public.html">Public Survey</a></li>
+							<li id="surveyNavIconPri" style="background-color: #88e9fc;"><a href="survey_private_list.html">Private Survey</a></li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-theme="b" data-content-theme="a">
+						<h4 class="pharmacyNavIcon">Pharmacy</h4>
+						<ul data-role="listview" class="pharmacyIndexFormat">
+							<li id="pharmacyNavIcon" style="background-color: #0b6677;"><a href="#">Pharmacy</a></li>
+						</ul>
+					</div>
+                    
+                    <a class="call-support"><i class="fa fa-phone fa-lg"></i> Call Support</a>
+					
+					
+				</div> <!-- End collaps container -->
+				
+<!--
+				<img src="img/icon_concor_bottom_left.png" width="125" style="left:0; bottom:0px; position:fixed; opacity:.3">
+				<img src="img/icon_MERCK_bottom_right.png" width="125" style="right:0; bottom:0px; position:fixed; opacity:.3">
+-->
+				
+				
+				
+			</div> <!-- End contents -->
+			
+			<div data-role="footer" class="footer navBtns" data-position="fixed">
+				<div data-role="navbar" data-grid="d" style="width:85%;">
+					<ul>
+						<li id="btnOfHome"><a href="home.html" data-ajax="false" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_home.png" width="100%" /></a></li>
+						<li id="btnOfConnections"><a href="connections.html" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_connections.png" width="100%" /></a></li>
+						<li id="btnOfPrice"><a href="concor_price.html" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_price.png" width="100%" /></a></li>
+						<li id="btnOfNearby"><a href="#" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_nearby.png" width="100%" /></a></li>
+						<li id="btnOfDDI"><a href="ddi.html" style="background:rgba(0,0,0,0) !important; padding:0"><img src="img/icon_ddi_nav.png" width="100%" /></a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<div style="width: 15%; position: fixed; right: 0; bottom: 0">
+					<img src="img/icon_bottom_right.png" style="width:17%; bottom:0; position:fixed">
+				</div>
+			</div><!-- end footer -->
+		</div><!-- end page Home -->
+		
+		
+		
+		<!-- jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/manageUsers.js"></script>
+
+
+        <script>
+			$('#btnOfNearby').on('click', function(){
+				AndroidFunction.nearBy();
+            });
+			$('.call-support').on('click', function(){
+				AndroidFunction.callSupport();
+            });
+        </script>
+		
+		<script>
+			$('#pageHome').on('pagecreate', function(event, ui){
+				console.log('Home page loaded');
+                
+            });
+
+        </script>
+		
+    </body>
+</html>

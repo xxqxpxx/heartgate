@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Heart Gate - CardioRisk</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style media="screen">
+        .ui-header-fixed {
+            top: -1px;
+            padding-top: auto;
+            display: block;
+            padding: 12px;
+        }
+        .ui-header .ui-title {
+          padding: 0px;
+          margin-top: 6px;
+          margin-bottom: 6px;
+          display: block;
+              font-weight: bold;
+        }
+        .ui-header-fixed {
+            top: -1px;
+            display: block;
+            position: absolute;
+        }
+        .ui-header-fixed.ui-fixed-hidden {
+          padding-top: 11px;
+        }
+        .ui-header-fixed {
+          position: fixed;
+        }
+        </style>
+    </head>
+
+    <body>
+
+		<div data-role="page" class="master" id="pageCardioRiskFactor">
+			<div data-role="header" data-position="fixed" data-theme="b" style="background:#000000b3; color: white;">
+				<h1>Cardiovascular Risk Factor</h1>
+			</div>
+
+			<div role="main" class="ui-content"> <!-- Start Contents from here -->
+				<form id="cvdCalc" class="form-inline" style="text-align:left">
+					<div class="form-group border col-sm-4 col-xs-12">
+						<label for="age" class="control-label white">Age:</label>
+						<input class="form-control" type="number" id="age" required />
+					</div>
+					<div class="form-group border col-sm-3 col-xs-12">
+						<label class="control-label col-xs-12 col-sm-4 white">Smoking:</label>
+						<div class="radio col-xs-12 col-sm-4">
+							<label><input type="radio" id="smoke1" name="smoke" value="Yes"/> Yes</label>
+						</div>
+						<div class="radio col-xs-12 col-sm-4">
+							<label><input type="radio" id="smoke2" name="smoke" value="No"/> No</label>
+						</div>
+					</div>
+					<div class="form-group border col-sm-3 col-xs-12">
+						<label class="control-label col-xs-12 col-sm-3 white">CVD: </label>
+						<div class="radio col-xs-12 col-sm-4">
+							<label><input type="radio" id="cvd1" name="cvd" value="Yes" /> Yes</label>
+						</div>
+						<div class="radio col-xs-12 col-sm-4">
+							<label><input type="radio" id="cvd2" name="cvd" value="No" /> No</label>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="form-group border col-sm-4 col-xs-12">
+						<label class="col-xs-12 white" style="margin-bottom: 10px">Systolic BP</label>
+						<select class="col-xs-12" id="SBP" name="systolic" style="margin-top: 0px">
+							<option>-Select-</option>
+						</select>
+					</div>
+					<div class="form-group border col-sm-7 col-xs-12">
+						<div class="form-group col-xs-6">
+							<label class="control-label col-xs-12 white" style="margin-bottom: 10px">Total Cholesterol</label>
+							<select class="col-xs-12" id="TC" name="totalCh" style="margin-top: 0px">
+								<option>-Select-</option>
+							</select>
+						</div>
+						<div class="form-group col-xs-6">
+							<label class="control-label col-xs-12 white" for="ldl-c" style="margin-bottom: 10px">LDL-C: </label>
+							<input type="number" id="ldl-c" class="form-control col-xs-12" style="margin-top: 0px" />
+						</div>
+
+					</div>
+					<div class="form-group border col-sm-4 col-xs-12">
+						<label class="control-labe col-xs-12 col-sm-3 white">Gender: </label>
+						<div class="radio col-xs-12 col-sm-4">
+							<label><input type="radio" id="gender1" name="gender" value="Male"/> Male</label>
+						</div>
+						<div class="radio col-xs-12 col-sm-4">
+							<label><input type="radio" id="gender2" name="gender" value="Female"/> Female</label>
+						</div>
+					</div>
+					<div class="form-group border col-xs-12 col-sm-7">
+						<label class="control-labe col-xs-12 col-sm-1 white">CKD: </label>
+						<div class="radio col-xs-12 col-sm-2">
+							<label><input type="radio" id="ckd1" name="ckd" value="Yes" /> Yes</label>
+						</div>
+						<div class="radio col-xs-12 col-sm-2">
+							<label><input type="radio" id="ckd2" name="ckd" value="No" /> No</label>
+						</div>
+						<div class="form-group col-xs-12 col-sm-7">
+							<label class="control-labe white" for="sc">Serum Creatinine:</label>
+							<input type="number" id="SC" class="form-control" />
+						</div>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<div class="form-group border col-sm-12 col-xs-12">
+						<label class="control-labe col-xs-12 col-sm-2 white">Diabetic type 1 or 2: </label>
+						<div class="radio col-xs-12 col-sm-1">
+							<label><input type="radio" id="diabetic1" name="diabetic" value="Yes" /> Yes</label>
+						</div>
+						<div class="radio col-xs-12 col-sm-1">
+							<label><input type="radio" id="diabetic2" name="diabetic" value="No" /> No</label>
+						</div>
+
+						<div class="clearfix"></div>
+						<br>
+						<div class="form-group col-sm-3 col-xs-12">
+							<label class="control-label white col-sm-6" style="width:100%">Albumin in urine: </label>
+							<input type="number" id="albumin" class="form-control col-sm-6" />
+						</div>
+						<div class="form-group col-sm-3 col-xs-12">
+							<label class="control-label white col-sm-6" style="width:100%">Preprandial BG: </label>
+							<input type="number" id="preprandial" class="form-control col-sm-6" />
+						</div>
+
+						<div class="form-group col-sm-3 col-xs-12">
+							<label class="control-label white col-sm-6" style="width:100%">Postprandial BG: </label>
+							<input type="number" id="postprandial" class="form-control col-sm-6" />
+						</div>
+						<div class="form-group col-sm-3 col-xs-12">
+							<label class="control-label white col-sm-6" for="a1c" style="width:100%">A1C: </label>
+							<input type="number" id="A1C" class="form-control col-sm-6" />
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="form-group col-xs-12 text-center" style="margin: 20px 0;">
+						<button id="estimate" type="button" class="btn btn-danger btn-lg">Estimate Risk</button>
+					</div>
+				</form>
+
+				<div class="row">
+					<div class="col-xs-12 tableOfResult">
+						<div class="col-sm-4 col-xs-8 alert-warning title">Your total CVD risk is:</div>
+						<div id="cvdResult1" class="col-sm-2 col-xs-4 alert-info">num%</div>
+						<div class="col-sm-3 col-xs-8 alert-warning title">Degree</div>
+						<div id="cvdResult2" class="col-sm-3 col-xs-4 alert-info">num</div>
+
+						<div class="clearfix"></div>
+
+						<div class="col-sm-4 col-xs-8 alert-warning title">Current SBP</div>
+						<div class="col-sm-2 col-xs-4 alert-info" id="sbpResult1">...mmHg</div>
+						<div class="col-sm-3 col-xs-8 alert-warning title">target is</div>
+						<div class="col-sm-3 col-xs-4 alert-info" id="sbpResult2">...mmHg</div>
+
+						<div class="clearfix"></div>
+
+						<div class="col-sm-4 col-xs-8 alert-warning title">Current TC</div>
+						<div class="col-sm-2 col-xs-4 alert-info" id="tcResult1">...mg/dl</div>
+						<div class="col-sm-3 col-xs-8 alert-warning title">target is</div>
+						<div class="col-sm-3 col-xs-4 alert-info" id="tcResult2">...mg/dl</div>
+
+						<div class="clearfix"></div>
+
+						<div class="col-sm-4 col-xs-8 alert-warning title">Current LDL-C</div>
+						<div class="col-sm-2 col-xs-4 alert-info" id="ldlResult1">...mg/dl</div>
+						<div class="col-sm-3 col-xs-8 alert-warning title">target is</div>
+						<div class="col-sm-3 col-xs-4 alert-info" id="ldlResult2">...mg/dl</div>
+
+						<div class="clearfix"></div>
+
+						<div class="col-sm-4 col-xs-8 alert-warning title">Current Preprandial BG</div>
+						<div class="col-sm-2 col-xs-4 alert-info" id="preResult1">...mg/dl</div>
+						<div class="col-sm-3 col-xs-8 alert-warning title">target is</div>
+						<div class="col-sm-3 col-xs-4 alert-info" id="preResult2">...mg/dl</div>
+
+						<div class="clearfix"></div>
+
+						<div class="col-sm-4 col-xs-8 alert-warning title">Current Postprandial</div>
+						<div class="col-sm-2 col-xs-4 alert-info" id="postResult1">...mg/dl</div>
+						<div class="col-sm-3 col-xs-8 alert-warning title">target is</div>
+						<div class="col-sm-3 col-xs-4 alert-info" id="postResult2">...mg/dl</div>
+
+						<div class="clearfix"></div>
+
+						<div class="col-sm-4 col-xs-8 alert-warning title">Current A1c</div>
+						<div class="col-sm-2 col-xs-4 alert-info" id="a1cResult1">...&#37;</div>
+						<div class="col-sm-3 col-xs-8 alert-warning title">target is</div>
+						<div class="col-sm-3 col-xs-4 alert-info" id="a1cResult2">...&#37;</div>
+
+						<div class="clearfix"></div>
+
+						<div class="col-sm-4 col-xs-8 alert-warning title">Current GFR</div>
+						<div class="col-sm-3 col-xs-4 alert-info" id="gfrResult1">...mL/min/1.73m<sup>2</sup></div>
+						<div class="col-sm-5 col-xs-12 alert-info" id="gfrResult2"></div>
+					</div>
+				</div>
+<!--
+
+				<img src="img/icon_concor_bottom_left.png" width="125" style="left:0; bottom:0px; position:fixed; opacity:.3">
+				<img src="img/icon_MERCK_bottom_right.png" width="125" style="right:0; bottom:0px; position:fixed; opacity:.3">
+-->
+
+
+			</div> <!-- End contents -->
+
+
+
+
+
+		<!-- jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/manageUsers.js"></script>
+
+		<script>
+			$('#pageCardioRiskFactor').on('pagecreate', function(event, ui){
+				console.log('pageCardioRiskFactor page loaded');
+				// Fill Systolic options
+				for(var i=100; i<=180; i+=2){
+					$('#SBP').append('<option>' + i + '</option>');
+				}
+				$('#SBP').append('<option>More...</option>');
+
+				// Fill Total Cholesterol options
+				for(var i=105; i<=305; i+=4){
+					$('#TC').append('<option>' + i + '</option>');
+				}
+				$('#TC').append('<option>More...</option>');
+
+
+				// Calculate...
+
+			});
+
+		</script>
+
+
+		<script>
+			$('#btnOfNearby').on('click', function(){
+				AndroidFunction.nearBy();
+            });
+        </script>
+
+    </body>
+</html>

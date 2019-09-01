@@ -1,6 +1,7 @@
 package dev.cat.mahmoudelbaz.heartgate.myAccount;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import dev.cat.mahmoudelbaz.heartgate.R;
+import dev.cat.mahmoudelbaz.heartgate.WebViewer;
 
 import static android.content.ContentValues.TAG;
 
@@ -50,6 +52,14 @@ public class NearByDrs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_near_by_drs);
+
+
+
+        Intent i = new Intent(this, WebViewer.class);
+        i.putExtra("url", "nearby_drs.html");
+        startActivity(i);
+        finish();
+
 
         pageId = 1;
         nearByConnections.clear();

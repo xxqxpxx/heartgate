@@ -257,10 +257,17 @@ public class WebViewer extends ActivityManagePermission implements GoogleApiClie
 //        webView.loadData(html_value, "text/html", "UTF-8");
 
 
+
+        // get url
+
+        Intent intent = getIntent();
+        String url = intent.getExtras().getString("url");
+
+
         if (idcheck.equals("0")) {
             webView.loadUrl("file:///android_asset/www/index.html");
         } else {
-            webView.loadUrl("file:///android_asset/www/home.html");
+            webView.loadUrl("file:///android_asset/www/" + url);
         }
 
 

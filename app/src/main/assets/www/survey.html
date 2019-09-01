@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Survey</title>
+        <link rel="stylesheet" href="css4/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <style>
+            .navbar-nav{
+                flex-direction: row
+            }
+            nav ul li a img{
+                width: 63px
+            }
+            nav.navbar, nav ul li a.nav-link{
+                padding: 0
+            }
+        </style>
+        
+    </head>
+    
+    <body class="master" style="font-size: 100%">
+		
+		<div id="pageSurvey">
+			<div style="background:#fdcc29; color: darkred; position:fixed; width: 100%; height: 50px; top: 0">
+				<a data-rel="back" data-direction="reverse" class="backBtnNavTop" id="backBtn" style="padding: 5px; top: 10px; left: 10px; position: fixed; color: darkred; z-index: 999">Back</a>
+				<h4 style="text-align: center; position: absolute; top: 13px; left:25%; margin: 0 auto; width: 50%">Survey</h4>
+				<img src="img/icon_M_top_right_withoutBG.png" width="50" style="top:10px; right:20px; position: fixed" />
+			</div>
+            
+            
+			
+			<iframe class="new-survey" id="new-survey"></iframe>
+			
+            
+            
+            <div style="width: 15%; position: fixed; right: 0; bottom: 0">
+                <img src="img/icon_bottom_right.png" style="width:17%; bottom:0; position:fixed">
+            </div>
+            
+            <nav class="navbar fixed-bottom">
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="btnOfHome">
+                        <a class="nav-link" href="home.html">
+                            <img src="img/icon_home.png">
+                        </a>
+                    </li>
+                    <li class="nav-item" id="btnOfConnections">
+                        <a class="nav-link" href="connections.html">
+                            <img src="img/icon_connections.png">
+                        </a>
+                    </li>
+                    <li class="nav-item" id="btnOfPrice">
+                        <a class="nav-link" href="concor_price.html">
+                            <img src="img/icon_price.png">
+                        </a>
+                    </li>
+                    <li class="nav-item" id="btnOfNearby">
+                        <a class="nav-link" href="#">
+                            <img src="img/icon_nearby.png">
+                        </a>
+                    </li>
+                    <li class="nav-item" id="btnOfDDI">
+                        <a class="nav-link" href="ddi.html">
+                            <img src="img/icon_ddi_nav.png">
+                        </a>
+                    </li>
+                </ul>
+            </nav><!-- /navbar -->
+            
+		</div><!-- end page 1 -->
+
+        
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="css4/bootstrap.min.js"></script>
+        <script src="js/manageUsers.js"></script>
+
+
+        <script>
+            $('#btnOfNearby').on('click', function(){
+                AndroidFunction.nearBy();
+            });
+            
+            $('#backBtn').on('click', function () {
+               location.href = "home.html"; 
+            });
+        </script>
+		
+    </body>
+</html>
