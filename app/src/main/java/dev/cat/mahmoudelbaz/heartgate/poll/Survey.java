@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class Survey extends AppCompatActivity {
     ProgressBar progressBar;
     EditText nearBysearchView;
     SurveyAdapter nearByConnectionsAdapter;
+    TextView myempty;
 
     SharedPreferences shared;
     String userID;
@@ -50,6 +52,7 @@ public class Survey extends AppCompatActivity {
 
         nearBysearchView = (EditText) findViewById(R.id.nearBysearch_view);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        myempty = findViewById(R.id.mytxtEmpty);
 
         getData();
 
@@ -87,9 +90,12 @@ public class Survey extends AppCompatActivity {
                     //    assert response.errorBody() != null;
                         Toast.makeText(Survey.this, response.errorBody().toString() ,  Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);
+                        myempty.setVisibility(View.VISIBLE);
+
                     } else {
                         cardioUpdatesResponseModels = response.body();
                         nearByConnectionsAdapter = new SurveyAdapter(Survey.this, cardioUpdatesResponseModels);
+                        myempty.setVisibility(View.GONE);
 
                 /*    RecycleViewCardoivascular.setHasFixedSize(true);
                     RecycleViewCardoivascular.setLayoutManager(new LinearLayoutManager(CardioUpdates.this));*/
@@ -105,6 +111,8 @@ public class Survey extends AppCompatActivity {
                     Toast.makeText(Survey.this, "failure , check your connection", Toast.LENGTH_LONG).show();
                     Log.e("CardioUpdates", "onFailure: ", t);
                     progressBar.setVisibility(View.GONE);
+                    myempty.setVisibility(View.VISIBLE);
+
                 }
             });
 

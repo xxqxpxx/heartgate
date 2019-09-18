@@ -7,6 +7,17 @@
     android:background="@drawable/bg"
     tools:context="dev.cat.mahmoudelbaz.heartgate.home.Home">
 
+    <TextView
+        android:id="@+id/txt_call_support"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/bottomLayout"
+        android:text="Call Support"
+        android:background="@drawable/rounded_rectangle_yellowish"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"  />
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -173,17 +184,7 @@
         android:layout_centerVertical="true" />
 
 
-    <TextView
-        android:id="@+id/txt_call_support"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:layout_above="@+id/bottomLayout"
-        android:text="Call Support"
-        android:background="@drawable/rounded_rectangle_yellowish"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"  />
+
 
 
 </RelativeLayout>

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class CardioUpdates extends AppCompatActivity {
     ProgressBar progressBar;
     EditText nearBysearchView;
     heartPressAdapter nearByConnectionsAdapter;
-
+    TextView myempty;
     SharedPreferences shared;
     String userID;
     List<CardioUpdatesResponseModel> cardioUpdatesResponseModels = new ArrayList<>();
@@ -50,6 +51,7 @@ public class CardioUpdates extends AppCompatActivity {
 
         userID = shared.getString("id", "0");
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        myempty = findViewById(R.id.mytxtEmpty);
 
         nearBysearchView = (EditText) findViewById(R.id.nearBysearch_view);
 
@@ -88,9 +90,12 @@ public class CardioUpdates extends AppCompatActivity {
            //         assert response.errorBody() != null;
                     Toast.makeText(CardioUpdates.this, response.errorBody().toString() ,  Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
+                    myempty.setVisibility(View.VISIBLE);
+
                 } else {
                     cardioUpdatesResponseModels = response.body();
                     nearByConnectionsAdapter = new heartPressAdapter(CardioUpdates.this, cardioUpdatesResponseModels);
+                    myempty.setVisibility(View.GONE);
 
                 /*    RecycleViewCardoivascular.setHasFixedSize(true);
                     RecycleViewCardoivascular.setLayoutManager(new LinearLayoutManager(CardioUpdates.this));*/
@@ -106,6 +111,8 @@ public class CardioUpdates extends AppCompatActivity {
                 Toast.makeText(CardioUpdates.this, "failure , check your connection", Toast.LENGTH_LONG).show();
                 Log.e("CardioUpdates", "onFailure: ", t);
                 progressBar.setVisibility(View.GONE);
+                myempty.setVisibility(View.VISIBLE);
+
             }
         });
 

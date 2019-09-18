@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,7 @@ public class VideosListActivity extends AppCompatActivity {
     EditText mysearchView;
     videoAdapter myVideoAdapter;
 
+    TextView myempty;
 
 
     @Override
@@ -50,6 +52,7 @@ public class VideosListActivity extends AppCompatActivity {
 
         userID = shared.getString("id", "0");
 
+        myempty = findViewById(R.id.mytxtEmpty);
 
         mysearchView.addTextChangedListener(new TextWatcher() {
             @Override
@@ -83,8 +86,11 @@ public class VideosListActivity extends AppCompatActivity {
                     assert response.errorBody() != null;
                     Toast.makeText(VideosListActivity.this, response.errorBody().toString() ,  Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
+                    myempty.setVisibility(View.VISIBLE);
+
                 } else {
                     videoResponseModel = response.body();
+                    myempty.setVisibility(View.GONE);
 
                     RecycleViewCardoivascular.setHasFixedSize(true);
                     RecycleViewCardoivascular.setLayoutManager(new LinearLayoutManager(VideosListActivity.this));
@@ -101,6 +107,8 @@ public class VideosListActivity extends AppCompatActivity {
                 Toast.makeText(VideosListActivity.this, "failure , check your connection", Toast.LENGTH_LONG).show();
                 Log.e("login", "onFailure: ", t);
                 progressBar.setVisibility(View.GONE);
+                myempty.setVisibility(View.VISIBLE);
+
             }
         });
 

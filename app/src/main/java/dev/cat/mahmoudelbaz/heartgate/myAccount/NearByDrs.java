@@ -28,6 +28,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import dev.cat.mahmoudelbaz.heartgate.MapsActivity;
 import dev.cat.mahmoudelbaz.heartgate.R;
 import dev.cat.mahmoudelbaz.heartgate.WebViewer;
 
@@ -55,10 +56,15 @@ public class NearByDrs extends AppCompatActivity {
 
 
 
-        Intent i = new Intent(this, WebViewer.class);
+        Intent i = new Intent(this, MapsActivity.class);
         i.putExtra("url", "nearby_drs.html");
         startActivity(i);
         finish();
+
+      /*  Intent i = new Intent(this, WebViewer.class);
+        i.putExtra("url", "nearby_drs.html");
+        startActivity(i);
+        finish();*/
 
 
         pageId = 1;

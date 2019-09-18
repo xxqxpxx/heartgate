@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -36,7 +37,7 @@ public class OnlineLibrary extends AppCompatActivity {
     ProgressBar progressBar;
     SharedPreferences shared;
     String userID;
-
+    TextView myempty;
     List<onlineLibraryResponseModel> myModels = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class OnlineLibrary extends AppCompatActivity {
 
         ButterKnife.bind(this);
         shared = getSharedPreferences("id", Context.MODE_PRIVATE);
+        myempty = findViewById(R.id.mytxtEmpty);
 
         userID = shared.getString("id", "0");
 
@@ -62,8 +64,11 @@ public class OnlineLibrary extends AppCompatActivity {
                     assert response.errorBody() != null;
                     Toast.makeText(OnlineLibrary.this, response.errorBody().toString() ,  Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
+                    myempty.setVisibility(View.VISIBLE);
+
                 } else {
                     myModels = response.body();
+                    myempty.setVisibility(View.GONE);
 
                     RecycleViewCardoivascular.setHasFixedSize(true);
                     RecycleViewCardoivascular.setLayoutManager(new LinearLayoutManager(OnlineLibrary.this));
@@ -79,6 +84,8 @@ public class OnlineLibrary extends AppCompatActivity {
                 Toast.makeText(OnlineLibrary.this, "failure , check your connection", Toast.LENGTH_LONG).show();
                 Log.e("login", "onFailure: ", t);
                 progressBar.setVisibility(View.GONE);
+                myempty.setVisibility(View.VISIBLE);
+
             }
         });
 

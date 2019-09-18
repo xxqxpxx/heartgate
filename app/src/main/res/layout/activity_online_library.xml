@@ -152,5 +152,15 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
 
+    <TextView
+        android:id="@+id/mytxtEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="No Articles"
+        android:textSize="35sp"
+        android:textColor="@color/black"/>
 
 </RelativeLayout>

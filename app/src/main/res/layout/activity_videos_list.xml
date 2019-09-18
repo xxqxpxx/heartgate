@@ -171,4 +171,15 @@
 
         </LinearLayout>
 
+    <TextView
+        android:id="@+id/mytxtEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="No Videos"
+        android:textSize="35sp"
+        android:textColor="@color/black"/>
+
 </RelativeLayout>

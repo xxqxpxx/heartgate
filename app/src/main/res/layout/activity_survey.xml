@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_concor_price"
     android:layout_width="match_parent"
@@ -167,12 +167,15 @@
         </LinearLayout>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/mytxtEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="No Survey"
+        android:textSize="35sp"
+        android:textColor="@color/black"/>
 
-
-
-
-
-
-
-
-</LinearLayout>
+</RelativeLayout>
